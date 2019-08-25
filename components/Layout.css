@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Subrayada");
+
+.nav-top-icon {
+  display: inline-block;
+  text-align: center;
+  width: 24px;
+  padding-right: 5px;
+}
+
+.navbar-toggler {
+  border: none !important;
+  outline: none !important;
+}
+
+.nav-link {
+  font-weight: bold;
+}
+
+.white-bg {
+  background: rgba(255, 255, 255, 0.75);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255, 0.92),
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.92),
+    rgba(255, 255, 255, 0.95) /* rgba(0, 0, 0, 0) */
+  );
+}
+
+.navbar-fixed-top {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030 !important;
+}
+
+.page-header .page-header-image {
+  position: absolute;
+  background-size: cover;
+  background-position: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-50px);
+  z-index: -1;
+}
+
+.page-header {
+  min-height: 500px;
+  max-height: 999px;
+  padding: 0;
+  color: #212121;
+  position: relative;
+  overflow: hidden;
+}
+
+.clear-filter {
+  background: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(0, 0, 0, 0.075)
+  );
+}
+
+.brand {
+  padding-top: 70px;
+}
+
+.banner-h1 {
+  font-family: "Montserrat Subrayada";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat";
+}
+
+header {
+  padding-top: 150px;
+}

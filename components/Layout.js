@@ -1,4 +1,7 @@
-import "../static/w3.css";
+import "./Layout.css";
+import "../static/bootstrap.min.css";
+// import "../static/now-ui-kit.min.css";
+
 import NavBar from "./NavBar";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -36,7 +39,7 @@ const navMenu = [
     label: "HOME",
     link: "/",
     icon: "home",
-    logo: "../static/jl-icon-19144-light-square.png"
+    logo: "../static/img/jl-icon-19144-light-square.png"
   },
   {
     label: "WHO WE ARE",
@@ -87,7 +90,22 @@ const Layout = props => {
   return (
     <div>
       <NavBar navMenu={navMenu} />
-      <div className="w3-padding-32" id="main">
+      <div className="page-header clear-filter">
+        <header
+          className="page-header-image"
+          style={{
+            backgroundImage: `url(../static/img/header.jpg)`
+          }}
+        >
+          <div className="container">
+            <div className="text-center brand">
+              <h1 className="banner-h1">{props.banner.title}</h1>
+              <h4>{props.banner.subTitle}</h4>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div className="container" id="main">
         {props.children}
       </div>
     </div>

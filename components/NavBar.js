@@ -1,13 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import "./NavBar.css";
 
 const NavBar = props => {
   const [toggleMenue, setToggleMenue] = useState(false);
+  const [toggleBgColor, setToggleBgColor] = useState(false);
 
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler);
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  });
+
+  const scrollHandler = () => {
+    setToggleBgColor(true);
+  };
   const toggleBarClick = () => {
     setToggleMenue(!toggleMenue);
+    if (!toggleMenue && !toggleBgColor) setToggleBgColor(true);
+    if (toggleMenue && toggleBgColor) setToggleBgColor(false);
+  };
+
+  const linkClick = () => {
+    if (toggleMenue) {
+      setToggleMenue(!toggleMenue);
+    }
   };
 
   const navMenu = props.navMenu.map((menu, index) => {
@@ -15,43 +33,58 @@ const NavBar = props => {
       return null;
     } else {
       return (
-        <Link href={menu.link} key={index}>
-          <a className="w3-bar-item w3-button w3-wide">
-            {" "}
-            <span className="nav-top-icon">
-              <FontAwesomeIcon icon={menu.icon} />
-            </span>
-            {menu.label}
-          </a>
-        </Link>
+        <li className="nav-item" key={index}>
+          <Link href={menu.link}>
+            <a className="nav-link" onClick={linkClick}>
+              {" "}
+              <span className="nav-top-icon">
+                <FontAwesomeIcon icon={menu.icon} />
+              </span>
+              {menu.label}
+            </a>
+          </Link>
+        </li>
       );
     }
   });
 
   const dropDownNavMenue = toggleMenue ? (
-    <div className="w3-bar-block w3-hide-large w3-hide-medium">{navMenu}</div>
-  ) : null;
+    <div className="navbar-collapse collapse show">
+      <ul className="navbar-nav mr-auto">{navMenu}</ul>
+    </div>
+  ) : (
+    ""
+  );
 
   return (
-    <div className="w3-top">
-      <div className="w3-bar w3-white w3-card" id="nav-bar">
+    <nav
+      className={
+        toggleBgColor
+          ? "navbar navbar-fixed-top navbar-expand-lg navbar-light white-bg "
+          : "navbar navbar-fixed-top navbar-expand-lg navbar-light bg-transparent "
+      }
+    >
+      <div className="container">
         <Link href={props.navMenu[0].link}>
-          <a className="w3-bar-item w3-button w3-wide">
-            {props.navMenu[0].brand}{" "}
+          <a className="navbar-brand">
+            <img
+              src={`../${props.navMenu[0].logo}`}
+              alt=""
+              width="30"
+              height="30"
+            />{" "}
+            {props.navMenu[0].brand}
           </a>
         </Link>
-
-        <div className="w3-right w3-hide-small">{navMenu}</div>
-        <a
-          href="#"
-          className="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
-          onClick={toggleBarClick}
-        >
+        <div className="collapse navbar-collapse" id="navBarContent">
+          <ul className="navbar-nav ml-auto">{navMenu}</ul>
+        </div>
+        <a href="" className="navbar-toggler" onClick={toggleBarClick}>
           <FontAwesomeIcon icon="bars" />
         </a>
         {dropDownNavMenue}
       </div>
-    </div>
+    </nav>
   );
 };
 
