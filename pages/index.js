@@ -9,12 +9,12 @@ const Index = () => {
   return (
     <Layout banner={banner}>
       <div className="container">
-        <h2>WE ARE ABOUT</h2>
-        <h5>Impact and Influence</h5>
+        <h2>FIRST & FOREMOST</h2>
+        <h5>We are a Conference</h5>
         <p>
-          Curated for Christian women who want to tighten their hold on God so
-          they are empowered to answer (practically) the needs at their jobs &
-          industry
+          Over a weekend, we provide spiritual and more importantly, practical
+          sessions, workshop and tools to support women in their daily roles at
+          work and life.
         </p>
       </div>
     </Layout>

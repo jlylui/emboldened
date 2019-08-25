@@ -49,12 +49,10 @@ const NavBar = props => {
   });
 
   const dropDownNavMenue = toggleMenue ? (
-    <div className="navbar-collapse collapse show">
-      <ul className="navbar-nav mr-auto">{navMenu}</ul>
+    <div className="navbar-collapse d-lg-none">
+      <ul className="navbar-nav d-lg-none">{navMenu}</ul>
     </div>
-  ) : (
-    ""
-  );
+  ) : null;
 
   return (
     <nav
@@ -76,8 +74,11 @@ const NavBar = props => {
             {props.navMenu[0].brand}
           </a>
         </Link>
-        <div className="collapse navbar-collapse" id="navBarContent">
-          <ul className="navbar-nav ml-auto">{navMenu}</ul>
+        <div
+          className="navbar-collapse navbar-fullwidth collapse justify-content-end"
+          id="navBarContent"
+        >
+          <ul className="navbar-nav">{navMenu}</ul>
         </div>
         <a className="navbar-toggler" onClick={toggleBarClick}>
           <FontAwesomeIcon icon="bars" />
