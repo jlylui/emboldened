@@ -79,7 +79,7 @@ const NavBar = props => {
         <div className="collapse navbar-collapse" id="navBarContent">
           <ul className="navbar-nav ml-auto">{navMenu}</ul>
         </div>
-        <a href="" className="navbar-toggler" onClick={toggleBarClick}>
+        <a className="navbar-toggler" onClick={toggleBarClick}>
           <FontAwesomeIcon icon="bars" />
         </a>
         {dropDownNavMenue}

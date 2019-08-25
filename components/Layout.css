@@ -10,6 +10,7 @@
 .navbar-toggler {
   border: none !important;
   outline: none !important;
+  cursor: pointer;
 }
 
 .nav-link {
