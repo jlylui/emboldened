@@ -1,9 +1,9 @@
-import App from "../components/App";
+import Layout from "../components/Layout";
 
 const Index = () => (
-  <div>
-    <App />
-  </div>
+  <Layout>
+    <p>Hello Next</p>
+  </Layout>
 );
 
 export default Index;

@@ -1,5 +1,5 @@
 import "../static/w3.css";
-import NavBar from "../components/NavBar";
+import NavBar from "./NavBar";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -36,11 +36,11 @@ const navMenu = [
     label: "HOME",
     link: "/",
     icon: "home",
-    logo: "images/jl-icon-19144-light-square.png"
+    logo: "../static/jl-icon-19144-light-square.png"
   },
   {
     label: "WHO WE ARE",
-    link: "#about",
+    link: "/about",
     icon: "users"
   },
   {
@@ -83,12 +83,15 @@ const socialMedia = [
   }
 ];
 
-const App = () => {
+const Layout = props => {
   return (
-    <div className="App">
+    <div>
       <NavBar navMenu={navMenu} />
+      <div className="w3-padding-32" id="main">
+        {props.children}
+      </div>
     </div>
   );
 };
 
-export default App;
+export default Layout;
