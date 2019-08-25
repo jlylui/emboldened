@@ -1,6 +1,8 @@
+import App from "../components/App";
+
 const Index = () => (
   <div>
-    <p>emboldened</p>
+    <App />
   </div>
 );
 
