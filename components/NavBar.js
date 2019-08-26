@@ -1,4 +1,7 @@
+import "./NavBar.css";
+
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
 const NavBar = props => {
@@ -16,12 +19,26 @@ const NavBar = props => {
         <li className="nav-item" key={index}>
           <Link href={menu.link}>
             <a className="nav-link" onClick={linkClick}>
-              {/* {" "}
+              {" "}
               <span className="nav-top-icon">
                 <FontAwesomeIcon icon={menu.icon} />
-              </span> */}
+              </span>
               {menu.label}
             </a>
+
+            {/* <NavLink
+                  href="#pablo"
+                  onClick={e => {
+                    e.preventDefault();
+                    document
+                      .getElementById("download-section")
+                      .scrollIntoView();
+                  }}
+                >
+                  <i className="now-ui-icons arrows-1_cloud-download-93"></i>
+                  <p>Download</p>
+                </NavLink> */}
+
           </Link>
         </li>
       );

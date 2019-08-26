@@ -1,12 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500|Montserrat+Subrayada");
 
-.nav-top-icon {
-  display: inline-block;
-  text-align: center;
-  width: 24px;
-  padding-right: 5px;
-}
-
 .navbar-toggler {
   border: none !important;
   outline: none !important;
