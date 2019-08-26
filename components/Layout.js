@@ -95,22 +95,8 @@ const Layout = props => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
+
       <NavBar navMenu={navMenu} />
-      {/* <div className="page-header clear-filter">
-        <header
-          className="page-header-image"
-          style={{
-            backgroundImage: `url(${props.banner.image})`
-          }}
-        >
-          <div className="container">
-            <div className="text-center brand">
-              <h1 className="banner-h1">{props.banner.title}</h1>
-              <h4>{props.banner.subTitle}</h4>
-            </div>
-          </div>
-        </header>
-      </div> */}
 
       <div className="page-header clear-filter" 
       filter-color="black"
@@ -127,8 +113,8 @@ const Layout = props => {
           </div>
         </div>        
       </div>
-
-      <div className="container" id="main">
+      
+      <div className="main">
         {props.children}
       </div>
     </div>

@@ -16,3 +16,11 @@
 .navbar .navbar-brand {
   font-size: 1rem;
 }
+
+.navbar.bg-white:not(.navbar-transparent) .nav-item  .nav-link:not(.btn) {
+  color: #666;
+}
+
+.navbar.bg-white:not(.navbar-transparent) a:not(.dropdown-item):not(.btn) {
+  color: #666;
+}

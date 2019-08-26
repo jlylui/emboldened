@@ -6,6 +6,11 @@
   text-transform: uppercase;
   font-weight: 200;
 }
+
+.content-title {
+  text-transform: uppercase;
+}
+
 /* 
 .navbar-toggler {
   border: none !important;
