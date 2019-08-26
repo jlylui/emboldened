@@ -112,8 +112,10 @@ const Layout = props => {
         </header>
       </div> */}
 
-      <div className="page-header clear-filter" filter-color="orange">
-        <div className="page-header-image" data-parallax="true" style={{
+      <div className="page-header clear-filter" 
+      // filter-color="orange"
+      >
+        <div className="page-header-image" style={{
             backgroundImage: `url(${props.banner.image})`
           }}>
           <div className="container">
