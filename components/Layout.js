@@ -2,6 +2,7 @@
 import "../static/bootstrap.min.css";
 import "../static/theme.css"
 
+import Head from 'next/head'
 import NavBar from "./NavBar";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -89,6 +90,11 @@ const socialMedia = [
 const Layout = props => {
   return (
     <div>
+      <Head>
+        <title>Emboldened</title> { /*todo make dynamic */}
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <NavBar navMenu={navMenu} />
       <div className="page-header clear-filter">
         <header
