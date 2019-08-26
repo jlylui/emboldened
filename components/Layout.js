@@ -113,18 +113,19 @@ const Layout = props => {
       </div> */}
 
       <div className="page-header clear-filter" 
-      // filter-color="orange"
+      filter-color="orange"
       >
-        <div className="page-header-image" style={{
-            backgroundImage: `url(${props.banner.image})`
-          }}>
-          <div className="container">
-            <div className="content-center brand">
-              <h1 className="h1-seo">{props.banner.title}</h1>
-              <h3>{props.banner.subTitle}</h3>
-            </div>
-          </div>        
+        <div className="page-header-image" data-parallax="true"
+        style={{
+          backgroundImage: `url(${props.banner.image})`
+        }}>
         </div>
+        <div className="container">
+          <div className="content-center brand">
+            <h1 className="h1-seo">{props.banner.title}</h1>
+            <h3>{props.banner.subTitle}</h3>
+          </div>
+        </div>        
       </div>
 
       <div className="container" id="main">
