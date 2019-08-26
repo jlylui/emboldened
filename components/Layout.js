@@ -1,6 +1,6 @@
-// import "./Layout.css";
 import "../static/bootstrap.min.css";
 import "../static/theme.css"
+import "./Layout.css";
 
 import Head from 'next/head'
 import NavBar from "./NavBar";
@@ -96,7 +96,7 @@ const Layout = props => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <NavBar navMenu={navMenu} />
-      <div className="page-header clear-filter">
+      {/* <div className="page-header clear-filter">
         <header
           className="page-header-image"
           style={{
@@ -110,7 +110,21 @@ const Layout = props => {
             </div>
           </div>
         </header>
+      </div> */}
+
+      <div className="page-header clear-filter" filter-color="orange">
+        <div className="page-header-image" data-parallax="true" style={{
+            backgroundImage: `url(${props.banner.image})`
+          }}>
+          <div className="container">
+            <div className="content-center brand">
+              <h1 className="h1-seo">{props.banner.title}</h1>
+              <h3>{props.banner.subTitle}</h3>
+            </div>
+          </div>        
+        </div>
       </div>
+
       <div className="container" id="main">
         {props.children}
       </div>
