@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Subrayada");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500|Montserrat+Subrayada");
 
 .nav-top-icon {
   display: inline-block;
@@ -56,6 +56,7 @@
   max-height: 999px;
   padding: 0;
   color: #212121;
+  /* color: #fff; */
   position: relative;
   overflow: hidden;
 }
@@ -80,6 +81,7 @@ h4,
 h5,
 h6 {
   font-family: "Montserrat";
+  font-weight: bold;
 }
 
 header {

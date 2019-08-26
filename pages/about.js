@@ -3,7 +3,8 @@ import Layout from "../components/Layout";
 const About = () => {
   const banner = {
     title: "ABOUT US",
-    subTitle: "Our Mision & Vision; Our Team"
+    subTitle: "Our Mision & Vision; Our Team",
+    image: "../static/img/header-02.jpg"
   };
 
   return (

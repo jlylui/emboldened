@@ -3,7 +3,8 @@ import Layout from "../components/Layout";
 const Index = () => {
   const banner = {
     title: "EMBOLDENED",
-    subTitle: "Equipping & Raising Christian Women in the Marketplace"
+    subTitle: "Equipping & Raising Christian Women in the Marketplace",
+    image: "../static/img/header-01.jpg"
   };
 
   return (

@@ -1,6 +1,5 @@
 import "./Layout.css";
 import "../static/bootstrap.min.css";
-// import "../static/now-ui-kit.min.css";
 
 import NavBar from "./NavBar";
 
@@ -48,17 +47,17 @@ const navMenu = [
   },
   {
     label: "CONFERENCE",
-    link: "#conference",
+    link: "/conference",
     icon: "calendar-day"
   },
   {
     label: "CONTACT US",
-    link: "#contact",
+    link: "/#contact",
     icon: "envelope"
   },
   {
     label: "GET INVOLVED",
-    link: "get-involved",
+    link: "/get-involved",
     icon: "handshake"
   }
 ];
@@ -94,7 +93,7 @@ const Layout = props => {
         <header
           className="page-header-image"
           style={{
-            backgroundImage: `url(../static/img/header.jpg)`
+            backgroundImage: `url(${props.banner.image})`
           }}
         >
           <div className="container">
