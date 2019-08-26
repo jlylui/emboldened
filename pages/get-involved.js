@@ -47,9 +47,11 @@ const GetInvolved = () => {
 
   return (
     <Layout banner={banner}>
-      <div className="container">
-        {/* <h2 className="text-center">WAYS TO GET INVOLVED</h2> */}
-        <div className="card-deck">{joinUs}</div>
+      <div className="section">
+        <div className="container">
+          {/* <h2 className="text-center">WAYS TO GET INVOLVED</h2> */}
+          <div className="card-deck">{joinUs}</div>
+        </div>
       </div>
     </Layout>
   );
