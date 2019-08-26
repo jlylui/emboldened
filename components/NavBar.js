@@ -81,7 +81,7 @@ const NavBar = props => {
         <div className="container">
           <div className="navbar-translate">
             <Link href={props.navMenu[0].link}>
-              <a className="navbar-brand" id="navbar-brand">
+              <a className="navbar-brand">
                 <img
                   src={`../${props.navMenu[0].logo}`}
                   alt=""
@@ -105,11 +105,7 @@ const NavBar = props => {
               <span className="navbar-toggler-bar bottom-bar"></span>
             </button>
           </div>
-          <div
-            className="collapse navbar-collapse justify-content-end"
-            isOpen={collapseOpen}
-            navbar
-          >
+          <div className="collapse navbar-collapse justify-content-end">
             <ul className="navbar-nav">
               {navMenu}
             </ul>
