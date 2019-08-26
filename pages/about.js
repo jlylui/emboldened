@@ -4,7 +4,7 @@ const About = () => {
   const banner = {
     title: "ABOUT US",
     subTitle: "Our Mision & Vision; Our Team",
-    image: "../static/img/header-02.jpg"
+    image: "../static/img/header-02-dark.jpg"
   };
 
   return (

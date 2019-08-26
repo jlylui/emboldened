@@ -4,7 +4,7 @@ const Index = () => {
   const banner = {
     title: "EMBOLDENED",
     subTitle: "Equipping & Raising Christian Women in the Marketplace",
-    image: "../static/img/header-01.jpg"
+    image: "../static/img/header-01-dark.jpg"
   };
 
   return (

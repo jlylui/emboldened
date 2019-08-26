@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500|Montserrat+Subrayada");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500|Montserrat+Subrayada|Rock+Salt|Shadows+Into+Light");
 
 .nav-top-icon {
   display: inline-block;
@@ -15,6 +15,12 @@
 
 .nav-link {
   font-weight: bold;
+}
+
+.navbar-brand {
+  color: #424242 !important;
+  font-weight: bold;
+  text-shadow: 0.5px 0.5px #9e9e9e;
 }
 
 .navbar-fullwidth {
@@ -47,8 +53,8 @@
   min-height: 500px;
   max-height: 999px;
   padding: 0;
-  color: #212121;
-  /* color: #fff; */
+  /* color: #212121; */
+  color: #fff;
   position: relative;
   overflow: hidden;
 }
@@ -63,9 +69,48 @@
 }
 
 .banner-h1 {
-  font-family: "Montserrat Subrayada";
+  font-family: "Rock Salt";
+  padding-bottom: 50px;
+  font-size: 1.75rem;
+  text-shadow: 2px 2px #757575;
+  font-weight: bold;
 }
 
+.banner-h4 {
+  /* font-family: "Shadows Into Light"; */
+  /* font-weight: bolder; */
+  font-size: 1.25rem;
+  text-shadow: 1px 1px #757575;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 425px) {
+  .banner-h1 {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 576px) {
+  .banner-h1 {
+    font-size: 3rem;
+  }
+  .banner-h4 {
+    font-size: 1.5rem;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .banner-h1 {
+    font-size: 4rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
 h1,
 h2,
 h3,

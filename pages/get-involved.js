@@ -28,18 +28,19 @@ const GetInvolved = () => {
   const banner = {
     title: "JOIN US",
     subTitle: "Get Involved, We Need You!",
-    image: "../static/img/header-04.jpg"
+    image: "../static/img/header-04.jpg",
+    textColor: "#424242"
   };
 
   const joinUs = opportunities.map((opportunity, index) => (
-    <div className="card">
+    <div className="card" key={index}>
       <div className="card-body text-center">
         <h5 className="card-title ">{opportunity.title}</h5>
         <p className="card-text">{opportunity.info}</p>
-        <p class="card-text">
-          <small class="text-muted">{opportunity.quote}</small>
+        <p className="card-text">
+          <small className="text-muted">{opportunity.quote}</small>
           <br />
-          <small class="text-muted">{opportunity.quoteFrom}</small>
+          <small className="text-muted">{opportunity.quoteFrom}</small>
         </p>
       </div>
     </div>

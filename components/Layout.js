@@ -98,8 +98,16 @@ const Layout = props => {
           }}>
           <div className="container">
             <div className="text-center brand">
-              <h1 className="banner-h1">{props.banner.title}</h1>
-              <h4>{props.banner.subTitle}</h4>
+              <h1
+                className="banner-h1"
+                style={{ color: `${props.banner.textColor}` }}>
+                {props.banner.title}
+              </h1>
+              <h4
+                className="banner-h4"
+                style={{ color: `${props.banner.textColor}` }}>
+                {props.banner.subTitle}
+              </h4>
             </div>
           </div>
         </header>

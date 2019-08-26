@@ -4,7 +4,7 @@ const About = () => {
   const banner = {
     title: "CONFERENCE",
     subTitle: "Spark God-Given Dreams & Collabration",
-    image: "../static/img/header-03.jpg"
+    image: "../static/img/header-03-dark.jpg"
   };
 
   return (
