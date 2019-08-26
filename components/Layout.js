@@ -1,5 +1,6 @@
-import "./Layout.css";
+// import "./Layout.css";
 import "../static/bootstrap.min.css";
+import "../static/theme.css"
 
 import NavBar from "./NavBar";
 

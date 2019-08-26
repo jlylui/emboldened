@@ -55,35 +55,45 @@ const NavBar = props => {
   ) : null;
 
   return (
-    <nav
-      className={
-        toggleBgColor
-          ? "navbar navbar-fixed-top navbar-expand-lg navbar-light white-bg "
-          : "navbar navbar-fixed-top navbar-expand-lg navbar-light bg-transparent "
-      }
-    >
-      <div className="container">
-        <Link href={props.navMenu[0].link}>
-          <a className="navbar-brand">
-            <img
-              src={`../${props.navMenu[0].logo}`}
-              alt=""
-              width="30"
-              height="30"
-            />{" "}
-            {props.navMenu[0].brand}
+    // <nav
+    //   className={
+    //     toggleBgColor
+    //       ? "navbar navbar-fixed-top navbar-expand-lg navbar-light white-bg "
+    //       : "navbar navbar-fixed-top navbar-expand-lg navbar-light bg-transparent "
+    //   }
+    // >
+    //   <div className="container">
+    //     <Link href={props.navMenu[0].link}>
+    //       <a className="navbar-brand">
+    //         <img
+    //           src={`../${props.navMenu[0].logo}`}
+    //           alt=""
+    //           width="30"
+    //           height="30"
+    //         />{" "}
+    //         {props.navMenu[0].brand}
+    //       </a>
+    //     </Link>
+    //     <div
+    //       className="navbar-collapse navbar-fullwidth collapse justify-content-end"
+    //       id="navBarContent"
+    //     >
+    //       <ul className="navbar-nav">{navMenu}</ul>
+    //     </div>
+    //     <a className="navbar-toggler" onClick={toggleBarClick}>
+    //       <FontAwesomeIcon icon="bars" />
+    //     </a>
+    //     {dropDownNavMenue}
+    //   </div>
+    // </nav>
+
+    <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent " color-on-scroll="400">
+      <div class="container">
+        <div class="navbar-translate">
+          <a class="navbar-brand" data-placement="bottom">
+            asdf
           </a>
-        </Link>
-        <div
-          className="navbar-collapse navbar-fullwidth collapse justify-content-end"
-          id="navBarContent"
-        >
-          <ul className="navbar-nav">{navMenu}</ul>
         </div>
-        <a className="navbar-toggler" onClick={toggleBarClick}>
-          <FontAwesomeIcon icon="bars" />
-        </a>
-        {dropDownNavMenue}
       </div>
     </nav>
   );
