@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400&display=swap');
 
 /*!
 
@@ -5739,6 +5739,11 @@ img {
 .clear-filter[filter-color=orange] {
 	background: rgba(44, 44, 44, .2);
 	background: linear-gradient(0deg, rgba(44, 44, 44, .2), rgba(224, 23, 3, .6))
+}
+
+.clear-filter[filter-color=black] {
+	background: rgba(44, 44, 44, .2);
+	background: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .6))
 }
 
 .section-story-overview {

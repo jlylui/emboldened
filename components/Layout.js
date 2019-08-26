@@ -113,7 +113,7 @@ const Layout = props => {
       </div> */}
 
       <div className="page-header clear-filter" 
-      filter-color="orange"
+      filter-color="black"
       >
         <div className="page-header-image" data-parallax="true"
         style={{
