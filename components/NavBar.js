@@ -80,13 +80,17 @@ const NavBar = props => {
       <nav className={"navbar navbar-expand-lg bg-white fixed-top " + navbarColor} expand="lg" color="info">
         <div className="container">
           <div className="navbar-translate">
-            <a className="navbar-brand"
-              href="https://demos.creative-tim.com/now-ui-kit-react/#/index?ref=nukr-index-navbar"
-              target="_blank"
-              id="navbar-brand"
-            >
-              Now UI Kit React
-            </a>
+            <Link href={props.navMenu[0].link}>
+              <a className="navbar-brand" id="navbar-brand">
+                <img
+                  src={`../${props.navMenu[0].logo}`}
+                  alt=""
+                  width="30"
+                  height="30"
+                />{" "}
+                {props.navMenu[0].brand}
+              </a>
+            </Link>
             <button
               className="navbar-toggler navbar-toggler"
               onClick={() => {
