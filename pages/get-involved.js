@@ -32,7 +32,7 @@ const GetInvolved = () => {
   };
 
   const joinUs = opportunities.map((opportunity, index) => (
-    <div class="card">
+    <div className="card">
       <div className="card-body text-center">
         <h5 className="card-title ">{opportunity.title}</h5>
         <p className="card-text">{opportunity.info}</p>

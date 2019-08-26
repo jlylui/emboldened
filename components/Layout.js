@@ -2,6 +2,7 @@ import "./Layout.css";
 import "../static/bootstrap.min.css";
 
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -94,8 +95,7 @@ const Layout = props => {
           className="page-header-image"
           style={{
             backgroundImage: `url(${props.banner.image})`
-          }}
-        >
+          }}>
           <div className="container">
             <div className="text-center brand">
               <h1 className="banner-h1">{props.banner.title}</h1>
@@ -107,6 +107,7 @@ const Layout = props => {
       <div className="container" id="main">
         {props.children}
       </div>
+      <Footer socialMedia={socialMedia} />
     </div>
   );
 };

@@ -58,10 +58,9 @@ const NavBar = props => {
     <nav
       className={
         toggleBgColor
-          ? "navbar navbar-fixed-top navbar-expand-lg navbar-light white-bg "
-          : "navbar navbar-fixed-top navbar-expand-lg navbar-light bg-transparent "
-      }
-    >
+          ? "navbar fixed-top navbar-expand-lg navbar-light white-bg "
+          : "navbar fixed-top navbar-expand-lg navbar-light bg-transparent "
+      }>
       <div className="container">
         <Link href={props.navMenu[0].link}>
           <a className="navbar-brand">
@@ -76,8 +75,7 @@ const NavBar = props => {
         </Link>
         <div
           className="navbar-collapse navbar-fullwidth collapse justify-content-end"
-          id="navBarContent"
-        >
+          id="navBarContent">
           <ul className="navbar-nav">{navMenu}</ul>
         </div>
         <a className="navbar-toggler" onClick={toggleBarClick}>

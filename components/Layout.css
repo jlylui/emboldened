@@ -33,14 +33,6 @@
   );
 }
 
-.navbar-fixed-top {
-  position: fixed !important;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030 !important;
-}
-
 .page-header .page-header-image {
   position: absolute;
   background-size: cover;
@@ -86,4 +78,9 @@ h6 {
 
 header {
   padding-top: 250px;
+}
+
+.footer-icon {
+  color: #77cccd;
+  padding: 0.5rem 0.5rem;
 }
