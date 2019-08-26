@@ -60,7 +60,7 @@ const NavBar = props => {
           }}
         />
       ) : null}
-      <nav className={"navbar navbar-expand-lg bg-primary fixed-top " + navbarColor} expand="lg" color="info">
+      <nav className={"navbar navbar-expand-lg bg-white fixed-top " + navbarColor} expand="lg" color="info">
         <div className="container">
           <div className="navbar-translate">
             <a className="navbar-brand"
