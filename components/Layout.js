@@ -1,8 +1,9 @@
-import "./Layout.css";
 import "../static/bootstrap.min.css";
+import "../static/theme.css";
+import "./Layout.css";
 
+import Head from "next/head";
 import NavBar from "./NavBar";
-import Footer from "./Footer";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -89,33 +90,30 @@ const socialMedia = [
 const Layout = props => {
   return (
     <div>
+      <Head>
+        <title>Emboldened</title> {/*todo make dynamic */}
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+
       <NavBar navMenu={navMenu} />
-      <div className="page-header clear-filter">
-        <header
+
+      <div className="page-header clear-filter" filter-color="black">
+        <div
           className="page-header-image"
+          data-parallax="true"
           style={{
             backgroundImage: `url(${props.banner.image})`
-          }}>
-          <div className="container">
-            <div className="text-center brand">
-              <h1
-                className="banner-h1"
-                style={{ color: `${props.banner.textColor}` }}>
-                {props.banner.title}
-              </h1>
-              <h4
-                className="banner-h4"
-                style={{ color: `${props.banner.textColor}` }}>
-                {props.banner.subTitle}
-              </h4>
-            </div>
+          }}></div>
+        <div className="container">
+          <div className="content-center brand">
+            <h1 className="h1-seo">{props.banner.title}</h1>
+            <h3>{props.banner.subTitle}</h3>
           </div>
-        </header>
+        </div>
       </div>
-      <div className="container" id="main">
-        {props.children}
-      </div>
-      <Footer socialMedia={socialMedia} />
+
+      <div className="main">{props.children}</div>
     </div>
   );
 };

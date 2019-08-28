@@ -1,32 +1,49 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500|Montserrat+Subrayada|Rock+Salt|Shadows+Into+Light");
+Skip to content
+ 
+Search or jump to…
 
-.nav-top-icon {
-  display: inline-block;
-  text-align: center;
-  width: 24px;
-  padding-right: 5px;
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@jlylui 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+ 
+Code  Issues 0  Pull requests 0  Projects 0  Security
+emboldened/components/Layout.css
+@duubyPlz duubyPlz auto update
+f05b789 2 days ago
+@jlylui @duubyPlz
+94 lines (81 sloc)  1.45 KB
+    
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,500|Montserrat+Subrayada");
+
+.brand .h1-seo {
+  font-family: "Montserrat Subrayada";
+  font-size: 2.8em;
+  text-transform: uppercase;
+  font-weight: 200;
 }
 
+.content-title {
+  text-transform: uppercase;
+}
+
+/* 
 .navbar-toggler {
   border: none !important;
   outline: none !important;
   cursor: pointer;
 }
-
 .nav-link {
   font-weight: bold;
 }
-
-.navbar-brand {
-  color: #424242 !important;
-  font-weight: bold;
-  text-shadow: 0.5px 0.5px #9e9e9e;
-}
-
 .navbar-fullwidth {
   flex-basis: 100% !important;
 }
-
 .white-bg {
   background: rgba(255, 255, 255, 0.75);
   background: linear-gradient(
@@ -35,10 +52,16 @@
     rgba(255, 255, 255, 0.92),
     rgba(255, 255, 255, 0.9),
     rgba(255, 255, 255, 0.92),
-    rgba(255, 255, 255, 0.95) /* rgba(0, 0, 0, 0) */
+    rgba(255, 255, 255, 0.95) 
   );
 }
-
+.navbar-fixed-top {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030 !important;
+}
 .page-header .page-header-image {
   position: absolute;
   background-size: cover;
@@ -48,17 +71,14 @@
   transform: translateY(-50px);
   z-index: -1;
 }
-
 .page-header {
   min-height: 500px;
   max-height: 999px;
   padding: 0;
-  /* color: #212121; */
-  color: #fff;
+  color: #212121;
   position: relative;
   overflow: hidden;
 }
-
 .clear-filter {
   background: rgba(255, 255, 255, 0.2);
   background: linear-gradient(
@@ -66,50 +86,9 @@
     rgba(255, 255, 255, 0.02),
     rgba(0, 0, 0, 0.075)
   );
-}
-
+} 
 .banner-h1 {
-  font-family: "Rock Salt";
-  padding-bottom: 50px;
-  font-size: 1.75rem;
-  text-shadow: 2px 2px #757575;
-  font-weight: bold;
-}
-
-.banner-h4 {
-  /* font-family: "Shadows Into Light"; */
-  /* font-weight: bolder; */
-  font-size: 1.25rem;
-  text-shadow: 1px 1px #757575;
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 425px) {
-  .banner-h1 {
-    font-size: 2.25rem;
-  }
-}
-@media (min-width: 576px) {
-  .banner-h1 {
-    font-size: 3rem;
-  }
-  .banner-h4 {
-    font-size: 1.5rem;
-  }
-}
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  .banner-h1 {
-    font-size: 4rem;
-  }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+  font-family: "Montserrat Subrayada";
 }
 h1,
 h2,
@@ -120,12 +99,7 @@ h6 {
   font-family: "Montserrat";
   font-weight: bold;
 }
-
 header {
   padding-top: 250px;
 }
-
-.footer-icon {
-  color: #77cccd;
-  padding: 0.5rem 0.5rem;
-}
+*/
