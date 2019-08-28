@@ -114,6 +114,8 @@ const Layout = props => {
       </div>
 
       <div className="main">{props.children}</div>
+
+      <div className="main">{props.children}</div>
     </div>
   );
 };

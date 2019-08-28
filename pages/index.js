@@ -9,14 +9,17 @@ const Index = () => {
 
   return (
     <Layout banner={banner}>
-      <div className="container">
-        <h2>FIRST & FOREMOST</h2>
-        <h5>We are a Conference</h5>
-        <p>
-          Over a weekend, we provide spiritual and more importantly, practical
-          sessions, workshop and tools to support women in their daily roles at
-          work and life.
-        </p>
+      <div className="section">
+        <div className="container">
+          <h2 className="content-title">First &amp; Foremost</h2>
+          <h5>We are a Conference</h5>
+          <p>
+            Over a weekend, we provide spiritual and more importantly, practical
+            sessions, workshop and tools to support women in their daily roles at
+            work and life.
+          </p>
+          <div style={{paddingBottom: 1000}} />
+        </div>
       </div>
     </Layout>
   );

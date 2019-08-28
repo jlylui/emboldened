@@ -9,14 +9,16 @@ const About = () => {
 
   return (
     <Layout banner={banner}>
-      <div className="container">
-        <h2>WE ARE ABOUT</h2>
-        <h5>Impact and Influence</h5>
-        <p>
-          Curated for Christian women who want to tighten their hold on God so
-          they are empowered to answer (practically) the needs at their jobs &
-          industry
-        </p>
+      <div className="section">
+        <div className="container">
+          <h2 className="content-title">We Are About</h2>
+          <h5>Impact and Influence</h5>
+          <p>
+            Curated for Christian women who want to tighten their hold on God so
+            they are empowered to answer (practically) the needs at their jobs &amp;
+            industry
+          </p>
+        </div>
       </div>
     </Layout>
   );

@@ -9,13 +9,15 @@ const About = () => {
 
   return (
     <Layout banner={banner}>
-      <div className="container">
-        <h2>READY FOR EMBOLDENED 2020</h2>
-        <h5>What to Expect</h5>
-        <p>
-          At conference, we'll provide help to delegates starting their personal
-          calling through coaching, providing resources and networking.
-        </p>
+      <div className="section">
+        <div className="container">
+          <h2 className="content-title">Ready For Emboldened 2020</h2>
+          <h5>What to Expect</h5>
+          <p>
+            At conference, we'll provide help to delegates starting their personal
+            calling through coaching, providing resources and networking.
+          </p>
+        </div>
       </div>
     </Layout>
   );
