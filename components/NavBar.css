@@ -1,7 +1,4 @@
 .nav-top-icon {
-  /* display: inline-block; */
-  /* text-align: center; */
-  /* width: 24px; */
   padding-right: 5px;
 }
 
@@ -17,7 +14,7 @@
   font-size: 1rem;
 }
 
-.navbar.bg-white:not(.navbar-transparent) .nav-item  .nav-link:not(.btn) {
+.navbar.bg-white:not(.navbar-transparent) .nav-item .nav-link:not(.btn) {
   color: #666;
 }
 

@@ -2,8 +2,8 @@ import Layout from "../components/Layout";
 
 const About = () => {
   const banner = {
-    title: "ABOUT US",
-    subTitle: "Our Mision & Vision; Our Team",
+    title: "About Us",
+    subTitle: "Our Mission & Vision; Our Team",
     image: "../static/img/header-02-dark.jpg"
   };
 
@@ -15,8 +15,8 @@ const About = () => {
           <h5>Impact and Influence</h5>
           <p>
             Curated for Christian women who want to tighten their hold on God so
-            they are empowered to answer (practically) the needs at their jobs &amp;
-            industry
+            they are empowered to answer (practically) the needs at their jobs
+            &amp; industry
           </p>
         </div>
       </div>

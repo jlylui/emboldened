@@ -26,10 +26,9 @@ const opportunities = [
 
 const GetInvolved = () => {
   const banner = {
-    title: "JOIN US",
+    title: "Join Us",
     subTitle: "Get Involved, We Need You!",
-    image: "../static/img/header-04.jpg",
-    textColor: "#424242"
+    image: "../static/img/header-04.jpg"
   };
 
   const joinUs = opportunities.map((opportunity, index) => (

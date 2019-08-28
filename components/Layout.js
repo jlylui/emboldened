@@ -4,6 +4,7 @@ import "./Layout.css";
 
 import Head from "next/head";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -112,10 +113,8 @@ const Layout = props => {
           </div>
         </div>
       </div>
-
       <div className="main">{props.children}</div>
-
-      <div className="main">{props.children}</div>
+      <Footer socialMedia={socialMedia} />
     </div>
   );
 };

@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 
 const Index = () => {
   const banner = {
-    title: "EMBOLDENED",
+    title: "emboldened",
     subTitle: "Equipping & Raising Christian Women in the Marketplace",
     image: "../static/img/header-01-dark.jpg"
   };
@@ -15,10 +15,10 @@ const Index = () => {
           <h5>We are a Conference</h5>
           <p>
             Over a weekend, we provide spiritual and more importantly, practical
-            sessions, workshop and tools to support women in their daily roles at
-            work and life.
+            sessions, workshop and tools to support women in their daily roles
+            at work and life.
           </p>
-          <div style={{paddingBottom: 1000}} />
+          <div style={{ paddingBottom: 1000 }} />
         </div>
       </div>
     </Layout>

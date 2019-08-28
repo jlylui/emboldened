@@ -10,7 +10,7 @@ const Footer = props => {
   ));
 
   return (
-    <footer className="footer mt-auto py-5">
+    <footer className="footer">
       <div className="container text-center">
         <p className="text-muted">@Emboldened 2019. Follow us</p>
         <ul className="list-inline">{followUs}</ul>

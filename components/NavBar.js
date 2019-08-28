@@ -25,20 +25,6 @@ const NavBar = props => {
               </span>
               {menu.label}
             </a>
-
-            {/* <NavLink
-                  href="#pablo"
-                  onClick={e => {
-                    e.preventDefault();
-                    document
-                      .getElementById("download-section")
-                      .scrollIntoView();
-                  }}
-                >
-                  <i className="now-ui-icons arrows-1_cloud-download-93"></i>
-                  <p>Download</p>
-                </NavLink> */}
-
           </Link>
         </li>
       );
@@ -77,7 +63,10 @@ const NavBar = props => {
           }}
         />
       ) : null}
-      <nav className={"navbar navbar-expand-lg bg-white fixed-top " + navbarColor} expand="lg" color="info">
+      <nav
+        className={"navbar navbar-expand-lg bg-white fixed-top " + navbarColor}
+        expand="lg"
+        color="info">
         <div className="container">
           <div className="navbar-translate">
             <Link href={props.navMenu[0].link}>
@@ -98,22 +87,19 @@ const NavBar = props => {
                 setCollapseOpen(!collapseOpen);
               }}
               aria-expanded={collapseOpen}
-              type="button"
-            >
+              type="button">
               <span className="navbar-toggler-bar top-bar"></span>
               <span className="navbar-toggler-bar middle-bar"></span>
               <span className="navbar-toggler-bar bottom-bar"></span>
             </button>
           </div>
           <div className="collapse navbar-collapse justify-content-end">
-            <ul className="navbar-nav">
-              {navMenu}
-            </ul>
+            <ul className="navbar-nav">{navMenu}</ul>
           </div>
         </div>
       </nav>
     </>
   );
-}
+};
 
 export default NavBar;

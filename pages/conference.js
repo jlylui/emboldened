@@ -2,8 +2,8 @@ import Layout from "../components/Layout";
 
 const About = () => {
   const banner = {
-    title: "CONFERENCE",
-    subTitle: "Spark God-Given Dreams & Collabration",
+    title: "Conference",
+    subTitle: "Spark God-Given Dreams & Collaboration",
     image: "../static/img/header-03-dark.jpg"
   };
 
@@ -14,8 +14,9 @@ const About = () => {
           <h2 className="content-title">Ready For Emboldened 2020</h2>
           <h5>What to Expect</h5>
           <p>
-            At conference, we'll provide help to delegates starting their personal
-            calling through coaching, providing resources and networking.
+            At conference, we'll provide help to delegates starting their
+            personal calling through coaching, providing resources and
+            networking.
           </p>
         </div>
       </div>
