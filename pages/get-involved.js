@@ -26,7 +26,7 @@ const opportunities = [
 
 const GetInvolved = () => {
   const banner = {
-    title: "Join Us",
+    title: "Join us",
     subTitle: "Get Involved, We Need You!",
     image: "../static/img/header-04.jpg"
   };
