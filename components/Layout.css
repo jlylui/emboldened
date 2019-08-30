@@ -2,14 +2,25 @@
 @import url("../static/fonts/stylesheet.css");
 
 .brand .h1-seo {
-  font-family: "wakandaregular";
-  font-size: 5rem;
+  font-family: "Darkline Regular";
+  font-size: 7rem;
   /* text-transform: uppercase; */
   font-weight: 200;
-  text-shadow: 2px 2px #757575;
-  /* color: #212121; */
+  text-shadow: 2px 2px rgba(99, 67, 0, 0.6);
+  color: rgb(228, 197, 128);
 }
 
 .content-title {
   text-transform: uppercase;
 }
+
+.index-page .page-header {
+  height: 50vh;
+ }
+ .page-header {
+   min-height: 500px !important;
+   max-height: 999px !important;
+ }
+ .index-page .page-header .container > .content-center {
+   top: 50% !important;
+ }

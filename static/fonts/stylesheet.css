@@ -10,3 +10,10 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Darkline Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Darkline Regular'), url('Darkline.woff') format('woff');
+}

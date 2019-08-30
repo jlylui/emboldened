@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 
 const Index = () => {
   const banner = {
-    title: "emboldened",
+    title: "Emboldened",
     subTitle: "Equipping & Raising Christian Women in the Marketplace",
     image: "../static/img/header-01-dark.jpg"
   };
