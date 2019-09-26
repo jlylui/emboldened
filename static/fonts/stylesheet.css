@@ -12,8 +12,19 @@
 }
 
 @font-face {
-  font-family: 'Darkline Regular';
+  font-family: "Nucleo Outline";
+  src: url("nucleo-outline.eot");
+  src: url("nucleo-outline.eot") format("embedded-opentype"),
+    url("nucleo-outline.woff2") format("woff2"),
+    url("nucleo-outline.woff") format("woff"),
+    url("nucleo-outline.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Darkline Regular";
   font-style: normal;
   font-weight: normal;
-  src: local('Darkline Regular'), url('Darkline.woff') format('woff');
+  src: local("Darkline Regular"), url("Darkline.woff") format("woff");
 }

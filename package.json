@@ -26,9 +26,12 @@
     "@fortawesome/free-solid-svg-icons": "^5.10.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "@zeit/next-css": "^1.0.1",
+    "formik": "^1.5.8",
     "next": "^9.0.5",
     "next-fonts": "^0.18.0",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "react-select": "^3.0.5",
+    "yup": "^0.27.0"
   }
 }

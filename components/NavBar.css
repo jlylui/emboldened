@@ -2,10 +2,6 @@
   padding-right: 5px;
 }
 
-.navbar {
-  height: 80px;
-}
-
 .navbar .navbar-nav .nav-link:not(.btn) {
   font-size: 0.8rem;
 }

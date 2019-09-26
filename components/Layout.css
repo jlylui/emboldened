@@ -1,13 +1,23 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:200,500|Montserrat+Subrayada");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,500|PT+Sans|Roboto+Slab");
 @import url("../static/fonts/stylesheet.css");
 
-.brand .h1-seo {
+.navbar-brand {
+  font-family: "PT Sans";
+}
+
+.h1-seo {
   font-family: "Darkline Regular";
-  font-size: 7rem;
+  font-size: 4.5rem;
   /* text-transform: uppercase; */
   font-weight: 200;
   text-shadow: 2px 2px rgba(99, 67, 0, 0.6);
-  color: rgb(228, 197, 128);
+  color: rgb(228, 197, 135);
+}
+
+.h3-seo {
+  font-family: "Roboto Slab";
+  text-shadow: 2px 2px rgba(124, 123, 121, 0.6);
+  font-size: 1.25em;
 }
 
 .content-title {
@@ -16,11 +26,79 @@
 
 .index-page .page-header {
   height: 50vh;
- }
- .page-header {
-   min-height: 500px !important;
-   max-height: 999px !important;
- }
- .index-page .page-header .container > .content-center {
-   top: 50% !important;
- }
+}
+.page-header {
+  min-height: 500px;
+  max-height: 999px;
+}
+.index-page .page-header .container > .content-center {
+  top: 50%;
+}
+
+.home-page {
+  min-height: 100vh !important;
+  max-height: 999px !important;
+}
+
+.footer .copyright {
+  text-align: right !important;
+  /* float: right !important; */
+}
+
+.footer-icon:hover {
+  color: #ab8f54;
+}
+
+.error-text {
+  float: right;
+  color: #ff3636 !important;
+  font-size: 12px;
+  line-height: 2 !important;
+  padding-right: 10px;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 425px) {
+  .h1-seo {
+    font-size: 5rem !important;
+  }
+}
+@media (min-width: 576px) {
+  .h1-seo {
+    font-size: 6rem !important;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .h1-seo {
+    font-size: 7rem !important;
+  }
+  .h3-seo {
+    font-size: 1.825em !important;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .h1-seo {
+    font-size: 8rem !important;
+  }
+  .h3-seo {
+    font-size: 2em !important;
+  }
+  .index-page .page-header .container > .content-center {
+    top: 60%;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .h1-seo {
+    font-size: 9rem !important;
+  }
+  .h3-seo {
+    font-size: 2.1em !important;
+  }
+  .index-page .page-header .container > .content-center {
+    top: 60%;
+  }
+}
