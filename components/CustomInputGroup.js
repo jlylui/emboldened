@@ -33,9 +33,8 @@ const CustomInputGroup = props => {
                     checkBoxList.concat(form.values[props.nameTmp])
                   );
                 }
-
-                form.setFieldValue(props.nameTmp, "");
               }
+              form.setFieldValue(props.nameTmp, "");
               // remove empty value and "Other" from array
               const nextValue = form.values[props.name].filter(
                 value => value !== "Other" && value !== ""

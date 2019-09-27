@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import CommonField, { CommonFiledSchema } from "./CommonField";
 import CustomInputGroup from "./CustomInputGroup";
 
-const regex = "/^\\w.*\\S.*$/";
+const regex = /^\w.*\S.*$/;
 
 const VolunteerFormSchema = Yup.object().shape({
   ...CommonFiledSchema,
