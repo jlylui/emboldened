@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 
 import CommonField, { CommonFiledSchema } from "./CommonField";
-import CustomInputGroup from "./CustomInputGroup";
+import CustomFieldGroup from "./CustomFieldGroup";
+import ErrorFocus from "./ErrorFocus";
 
 const regex = /^\w.*\S.*$/;
 
@@ -80,8 +81,7 @@ const VolunteerForm = () => {
           alert(JSON.stringify(values, null, 2));
           setSubmitting(false);
         }, 400);
-      }}
-    >
+      }}>
       {({
         values,
         errors,
@@ -105,36 +105,30 @@ const VolunteerForm = () => {
             <input
               type="text"
               className="form-control"
-              placeholder="example@example.com"
+              placeholder="Church Name, City"
               name="church"
               value={values.church}
               onChange={handleChange}
             />
           </div>
           <br />
-          <CustomInputGroup
+          <CustomFieldGroup
             values={values}
             errors={errors}
-            status={status}
-            touched={touched}
             handleChange={handleChange}
             groupValues={availableGroupValues}
           />
           <br />
-          <CustomInputGroup
+          <CustomFieldGroup
             values={values}
             errors={errors}
-            status={status}
-            touched={touched}
             handleChange={handleChange}
             groupValues={interestGroupValues}
           />
           <br />
-          <CustomInputGroup
+          <CustomFieldGroup
             values={values}
             errors={errors}
-            status={status}
-            touched={touched}
             handleChange={handleChange}
             groupValues={skillGroupValues}
           />
@@ -146,32 +140,30 @@ const VolunteerForm = () => {
               name="message"
               rows="2"
               onChange={handleChange}
-              value={values.message}
-            ></textarea>
+              value={values.message}></textarea>
           </div>
           <div style={{ textAlign: "right" }}>
             {Object.values(touched).length > 0 ? (
               Object.values(errors).length > 0 ? (
-                <span
+                <div
                   className="text-danger"
                   style={{
                     paddingRight: "20px",
                     fontWeight: "bold",
                     textTransform: "uppercase"
-                  }}
-                >
+                  }}>
                   *Error in form. Please review inputs.
-                </span>
+                </div>
               ) : null
             ) : null}
             <button
               type="submit"
               className="btn btn-primary"
-              disabled={isSubmitting}
-            >
+              disabled={isSubmitting}>
               Submit
             </button>
           </div>
+          <ErrorFocus />
         </form>
       )}
     </Formik>

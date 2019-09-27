@@ -1,50 +1,52 @@
-import React, { useState } from "react";
+import React from "react";
 import { Field } from "formik";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Checkbox from "./Checkbox";
 
-const CustomInputGroup = props => {
-  const { values, errors, status, touched, handleChange, groupValues } = props;
-  const [checkBoxList, setCheckBoxList] = useState(groupValues.checkBoxLabels);
+const CustomFieldGroup = props => {
+  const { values, errors, handleChange, groupValues } = props;
 
   function AddToFieldArray(props) {
     return (
       <Field name={props.name}>
-        {({ field, form }) => (
-          <a
-            className="form-control form-check"
-            style={{
-              borderRadius: "3px",
-              fontSize: "14px",
-              cursor: "pointer",
-              padding: "4px 6px"
-            }}
-            onClick={() => {
-              const index = field.value.indexOf("Other");
-              if (typeof props.error == "undefined") {
-                if (
-                  typeof form.values[props.nameTmp] !== "undefined" &&
-                  form.values[props.nameTmp] !== "" &&
-                  index != -1
-                ) {
-                  form.values[props.name][index] = form.values[props.nameTmp];
-                  setCheckBoxList(
-                    checkBoxList.concat(form.values[props.nameTmp])
-                  );
+        {({ field, form }) => {
+          return (
+            <a
+              className="form-control form-check"
+              style={{
+                borderRadius: "3px",
+                fontSize: "14px",
+                cursor: "pointer",
+                padding: "4px 6px"
+              }}
+              onClick={() => {
+                const index = field.value.indexOf("Other");
+                if (typeof props.error === "undefined") {
+                  if (
+                    typeof form.values[props.nameTmp] !== "undefined" &&
+                    form.values[props.nameTmp] !== "" &&
+                    index != -1
+                  ) {
+                    form.values[props.name][index] = form.values[props.nameTmp];
+                    groupValues.checkBoxLabels.splice(
+                      groupValues.checkBoxLabels.length - 1,
+                      0,
+                      form.values[props.nameTmp]
+                    );
+                  }
                 }
-              }
-              form.setFieldValue(props.nameTmp, "");
-              // remove empty value and "Other" from array
-              const nextValue = form.values[props.name].filter(
-                value => value !== "Other" && value !== ""
-              );
-              form.setFieldValue(props.name, nextValue);
-            }}
-          >
-            <FontAwesomeIcon icon="plus" />
-          </a>
-        )}
+                form.setFieldValue(props.nameTmp, "");
+                // remove empty value and "Other" from array
+                // const nextValue = form.values[props.name].filter(
+                //   value => value !== "Other" && value !== ""
+                // );
+                // form.setFieldValue(props.name, nextValue);
+              }}>
+              <FontAwesomeIcon icon="plus" />
+            </a>
+          );
+        }}
       </Field>
     );
   }
@@ -53,12 +55,12 @@ const CustomInputGroup = props => {
     <div className="form-group">
       <label>{groupValues.groupTitle}</label>
       <br />
-      {checkBoxList.map((checkbox, index) => (
+      {groupValues.checkBoxLabels.map((checkbox, index) => (
         <Checkbox
           key={index}
           name={groupValues.name}
           value={checkbox}
-          className={groupValues.className}
+          className={checkbox === "Other" ? "" : groupValues.className}
         />
       ))}
       {values[groupValues.name].includes("Other") ? (
@@ -77,16 +79,14 @@ const CustomInputGroup = props => {
               minWidth: "80%",
               display: "inline-block",
               paddingLeft: "10px"
-            }}
-          >
+            }}>
             <textarea
               className="form-control"
               name={groupValues.tmp}
               rows="1"
               placeholder={groupValues.placeholder}
               onChange={handleChange}
-              value={values[groupValues.tmp]}
-            ></textarea>
+              value={values[groupValues.tmp]}></textarea>
             {errors[groupValues.tmp] ? (
               <span className="error-text">{errors[groupValues.tmp]}</span>
             ) : null}
@@ -100,8 +100,7 @@ const CustomInputGroup = props => {
             fontSize: ".8571em",
             padding: "10px 0px",
             color: "#888"
-          }}
-        >
+          }}>
           <span style={{ fontWeight: "bold" }}>Selected values:</span>
           <br />[{values[groupValues.name].toString()}]
         </div>
@@ -109,4 +108,4 @@ const CustomInputGroup = props => {
     </div>
   );
 };
-export default CustomInputGroup;
+export default CustomFieldGroup;

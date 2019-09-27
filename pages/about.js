@@ -11,7 +11,7 @@ const About = () => {
     <Layout banner={banner}>
       <div className="section">
         <div className="container">
-          <h2>About Emboldened</h2>
+          <h2 style={{ textTransform: "uppercase" }}>About Emboldened</h2>
           <p>
             Emboldened was born over countless coffee chats, thousands of
             messages asking difficult questions about work life and the struggle
@@ -30,32 +30,30 @@ const About = () => {
             lost.
           </p>
           <h2>Our vision &amp; mission</h2>
-          <p>
-            <ul>
-              <li>
-                We believe that the office cubicle &amp; work kitchen chats are
-                perfect mission fields to share God’s love.
-              </li>
-              <li>
-                That your presence as God’s daughter changes the atmosphere of
-                your work space; the direction of your company and by extension
-                the vision of your industry.
-              </li>
-              <li>
-                To boost your courage &amp; confidence as a woman of God, to be
-                an answer to the prayers of those who are struggling and hurting
-                around you.
-              </li>
-              <li>
-                Provide tools and training, enabling you to possess the skills
-                and qualifications required to succeed in your work role.
-              </li>
-              <li>
-                To provide a space for honest discussion, regardless of calling
-                and struggles, faced by women every single day.
-              </li>
-            </ul>
-          </p>
+          <ul>
+            <li>
+              We believe that the office cubicle &amp; work kitchen chats are
+              perfect mission fields to share God’s love.
+            </li>
+            <li>
+              That your presence as God’s daughter changes the atmosphere of
+              your work space; the direction of your company and by extension
+              the vision of your industry.
+            </li>
+            <li>
+              To boost your courage &amp; confidence as a woman of God, to be an
+              answer to the prayers of those who are struggling and hurting
+              around you.
+            </li>
+            <li>
+              Provide tools and training, enabling you to possess the skills and
+              qualifications required to succeed in your work role.
+            </li>
+            <li>
+              To provide a space for honest discussion, regardless of calling
+              and struggles, faced by women every single day.
+            </li>
+          </ul>
         </div>
       </div>
       <div className="section">
@@ -70,7 +68,7 @@ const About = () => {
             />
             <div className="card-body">
               <p className="card-text">
-                <small class="text-muted">Photo caption</small>
+                <small className="text-muted">Photo caption</small>
               </p>
               <p className="card-text">
                 We are a bunch of women working in various industries with a

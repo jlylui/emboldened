@@ -35,8 +35,7 @@ const CommonFiled = props => {
                 ? "has-danger"
                 : "has-success"
               : ""
-          }`}
-        >
+          }`}>
           <label>
             First Name<span className="text-danger"> *</span>
           </label>
@@ -59,8 +58,7 @@ const CommonFiled = props => {
                 ? "has-danger"
                 : "has-success"
               : ""
-          }`}
-        >
+          }`}>
           <label>
             Last Name<span className="text-danger"> *</span>
           </label>
@@ -80,8 +78,7 @@ const CommonFiled = props => {
       <div
         className={`form-group ${
           touched.email ? (errors.email ? "has-danger" : "has-success") : ""
-        }`}
-      >
+        }`}>
         <label>
           Email<span className="text-danger"> *</span>
         </label>
@@ -106,8 +103,7 @@ const CommonFiled = props => {
                 ? "has-danger"
                 : "has-success"
               : ""
-          }`}
-        >
+          }`}>
           <label>Country code</label>
           {errors.countryCode && touched.countryCode ? (
             <span className="error-text">{errors.countryCode}</span>
@@ -124,8 +120,7 @@ const CommonFiled = props => {
         <div
           className={`form-group col-md-8 ${
             touched.phone ? (errors.phone ? "has-danger" : "has-success") : ""
-          }`}
-        >
+          }`}>
           <label>Phone number</label>
           {errors.phone && touched.phone ? (
             <span className="error-text">{errors.phone}</span>
