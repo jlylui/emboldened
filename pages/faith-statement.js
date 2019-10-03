@@ -25,11 +25,8 @@ const banner = {
 const FaithStatement = () => {
   const statements = faithStatements.map((statement, index) => {
     return (
-      <Animated
-        animationIn="fadeInUp"
-        animationOut="fadeInUp"
-        isVisible={isInView()}>
-        <div className="row" ref={rowRef}>
+      <Animated animationIn="fadeInUp" animationOut="fadeInUp" isVisible={true}>
+        <div className="row">
           <div
             className={`statement-box ${
               index % 2 != 1 ? "box-left" : "box-right"
