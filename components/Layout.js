@@ -22,7 +22,9 @@ import {
   faSpinner,
   faHeart,
   faCoffee,
-  faPlus
+  faPlus,
+  faCross,
+  faComment
 } from "@fortawesome/free-solid-svg-icons";
 
 config.autoAddCss = false;
@@ -41,7 +43,9 @@ library.add(
   faHeart,
   faCoffee,
   faPlus,
-  faPlusSquare
+  faPlusSquare,
+  faCross,
+  faComment
 );
 
 const navMenu = [
@@ -71,6 +75,11 @@ const navMenu = [
     label: "Get Invovled",
     link: "/get-involved",
     icon: "handshake"
+  },
+  {
+    label: "Faith Statement",
+    link: "/faith-statement",
+    icon: "cross"
   }
 ];
 
@@ -104,21 +113,22 @@ const Layout = props => {
         <title>Emboldened</title> {/*todo make dynamic */}
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"></link>
       </Head>
 
       <NavBar navMenu={navMenu} />
 
       <div
         className={`${props.banner.className} page-header clear-filter `}
-        filter-color="black"
-      >
+        filter-color="black">
         <div
           className="page-header-image"
           data-parallax="true"
           style={{
             backgroundImage: `url(${props.banner.image})`
-          }}
-        ></div>
+          }}></div>
         <div className="container">
           <div className="content-center">
             <h1 className="h1-seo">{props.banner.title}</h1>

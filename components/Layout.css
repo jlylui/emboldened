@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:200,500|PT+Sans|Roboto+Slab");
 @import url("../static/fonts/stylesheet.css");
 
+.section .container {
+  padding: 0 18px;
+}
+
 .navbar-brand {
   font-family: "PT Sans";
 }
@@ -64,6 +68,93 @@ ul {
   line-height: 2 !important;
   padding-right: 10px;
 }
+
+.card-body {
+  padding: 1rem;
+}
+.card-text {
+  color: #5a5a5a;
+}
+
+p {
+  color: #5a5a5a;
+}
+
+li {
+  color: #5a5a5a;
+  padding-bottom: 0.4rem;
+}
+
+a {
+  font-weight: 500;
+}
+
+ul {
+  padding-inline-start: 1.5rem;
+}
+
+.statement-box {
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.statement-box .popover {
+  position: relative;
+  max-width: 100%;
+  z-index: 0;
+  box-shadow: none;
+  border: 1px solid rgba(228, 197, 135, 0.5);
+  /* background: #f2f3f7; */
+}
+.box-left {
+  margin-left: 1rem;
+}
+.box-right {
+  margin-right: 1rem;
+}
+
+.box-left .popover {
+  margin-right: 1.5rem;
+}
+.box-right .popover {
+  margin-left: 1.5rem;
+}
+.round-icon {
+  display: block;
+  border-width: 1px;
+  border-radius: 30px !important;
+  /* background-color: #e4c587; */
+  color: #e4c587;
+  height: 2.375rem;
+  min-width: 2.375rem;
+  width: 2.375rem;
+  padding: 0;
+  font-size: 0.9375rem;
+  line-height: 2.375rem;
+  text-align: center;
+}
+
+.statement-box .round-icon-left {
+  margin-left: -35px;
+  margin-top: -12px;
+  float: left;
+}
+
+.statement-box .round-icon-right {
+  margin-right: -35px;
+  margin-top: -12px;
+  float: right;
+}
+
+.popover-body p {
+  margin-bottom: 0px;
+  color: #5a5a5a;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 425px) {
   .h1-seo {
@@ -83,6 +174,13 @@ ul {
   .h3-seo {
     font-size: 1.825em !important;
   }
+  .box-left .popover {
+    margin-right: 1.5rem;
+  }
+  .box-right .popover {
+    text-align: right;
+    margin-left: 10rem;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -95,6 +193,18 @@ ul {
   }
   .index-page .page-header .container > .content-center {
     top: 60%;
+  }
+  .box-left .popover {
+    margin-right: 3.5rem;
+  }
+  .box-right .popover {
+    margin-left: 14rem;
+  }
+  .box-left {
+    margin-left: 3rem;
+  }
+  .box-right {
+    margin-right: 3rem;
   }
 }
 

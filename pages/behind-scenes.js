@@ -1,12 +1,12 @@
 import Layout from "../components/Layout";
 
-const BehindTheScenes = () => {
-  const banner = {
-    title: "Behind the Scenes",
-    subTitle: "",
-    image: "../static/img/header-03-behind-the-scenes.jpg"
-  };
+const banner = {
+  title: "Behind the Scenes",
+  subTitle: "",
+  image: "../static/img/header-03-behind-the-scenes.jpg"
+};
 
+const BehindTheScenes = () => {
   return (
     <Layout banner={banner}>
       <div className="section">

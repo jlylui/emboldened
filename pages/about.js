@@ -1,12 +1,12 @@
 import Layout from "../components/Layout";
 
-const About = () => {
-  const banner = {
-    title: "About us",
-    subTitle: "Our Mission & Vision; Our Team",
-    image: "../static/img/header-02-about-us.jpg"
-  };
+const banner = {
+  title: "About us",
+  subTitle: "Our Mission & Vision; Our Team",
+  image: "../static/img/header-02-about-us.jpg"
+};
 
+const About = () => {
   return (
     <Layout banner={banner}>
       <div className="section">
