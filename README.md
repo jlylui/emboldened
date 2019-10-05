@@ -26,22 +26,24 @@ https://www.figma.com/file/USa407muyoA0Fz4X0hdSMq/Wireframe?node-id=0%3A1
 
 Pre-requisities:
 
-- Docker for Desktop (https://www.docker.com/products/docker-desktop)
-- Dokcer toolbox (https://docs.docker.com/toolbox/overview/)
+- Docker for Desktop (https://www.docker.com/products/docker-desktop); or
+- Docker toolbox (https://docs.docker.com/toolbox/overview/)
 
 Run the following `docker-compose` commands in the root of the project:
 
 - `docker-compose build` builds the server application
 - `docker-compose up` brings up the services and runs the application
 
-The above commands bring up docker containers where the server application (React and Express) and database (Postgres) will be running in development mode using nodemon (auto-restart on file change).
+The above commands bring up docker containers where the server application (React and Express) and database (Postgres) run in development mode using nodemon (auto-restart on file change).
 
 [./docker-compose.yaml](./docker-compose.yaml) maps the server port to `localhost:3000` and Postgres database is exposed on `localhost:35432`. The connection string is `postgres://user:pass@localhost:35432/db` (username, password and database name are defined in [./docker-compose.yaml](./docker-compose.yaml)).
 
 ## Database Setup & Management
 
 The project uses Postgres with the Node Postgres driver (pg on npm). For persistent data, create an external docker volume:
-`docker volume create --name=pgdata`
+
+- `docker volume create --name=pgdata`
+
 [./docker-compose.yaml](./docker-compose.yaml) mounts the volume to database container.
 
 ### Migrations
