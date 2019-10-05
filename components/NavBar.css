@@ -1,0 +1,19 @@
+.nav-top-icon {
+  padding-right: 5px;
+}
+
+.navbar .navbar-nav .nav-link:not(.btn) {
+  font-size: 0.8rem;
+}
+
+.navbar .navbar-brand {
+  font-size: 1rem;
+}
+
+.navbar.bg-white:not(.navbar-transparent) .nav-item .nav-link:not(.btn) {
+  color: #666;
+}
+
+.navbar.bg-white:not(.navbar-transparent) a:not(.dropdown-item):not(.btn) {
+  color: #666;
+}
