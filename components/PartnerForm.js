@@ -29,7 +29,8 @@ const PartnerForm = () => {
       validationSchema={PartnerFormSchema}
       onSubmit={(values, { setSubmitting }) => {
         HTTP.savePartner(values);
-      }}>
+      }}
+    >
       {({
         values,
         errors,
@@ -43,7 +44,8 @@ const PartnerForm = () => {
           <div
             className={`form-group ${
               touched.name ? (errors.name ? "has-danger" : "has-success") : ""
-            }`}>
+            }`}
+          >
             <label>
               Name<span className="text-danger"> *</span>
             </label>
@@ -62,7 +64,8 @@ const PartnerForm = () => {
           <div
             className={`form-group ${
               touched.email ? (errors.email ? "has-danger" : "has-success") : ""
-            }`}>
+            }`}
+          >
             <label>
               Email<span className="text-danger"> *</span>
             </label>
@@ -100,15 +103,17 @@ const PartnerForm = () => {
             <textarea
               className="form-control"
               name="message"
-              rows="4"
+              rows="5"
               onChange={handleChange}
-              value={values.message}></textarea>
+              value={values.message}
+            ></textarea>
           </div>
           <div style={{ textAlign: "right" }}>
             <button
               type="submit"
               className="btn btn-primary"
-              disabled={isSubmitting}>
+              disabled={isSubmitting}
+            >
               Submit
             </button>
           </div>

@@ -188,9 +188,6 @@ ul {
   .h1-seo {
     font-size: 8rem !important;
   }
-  .h3-seo {
-    font-size: 2em !important;
-  }
   .index-page .page-header .container > .content-center {
     top: 60%;
   }
@@ -212,9 +209,6 @@ ul {
 @media (min-width: 1200px) {
   .h1-seo {
     font-size: 9rem !important;
-  }
-  .h3-seo {
-    font-size: 2.1em !important;
   }
   .index-page .page-header .container > .content-center {
     top: 60%;

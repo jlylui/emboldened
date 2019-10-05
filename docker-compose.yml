@@ -27,7 +27,7 @@ services:
       POSTGRES_PASSWORD: pass # setup password
       POSTGRES_DB: db # setup database name
     ports:
-      - "35432:5432"
+      - "5432:5432"
     # set up a volume - database is not lost after shutting down the container
     volumes:
       - pgdata:/var/lib/postgresql/data

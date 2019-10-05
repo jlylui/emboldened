@@ -36,7 +36,7 @@ Run the following `docker-compose` commands in the root of the project:
 
 The above commands bring up docker containers where the server application (React and Express) and database (Postgres) run in development mode using nodemon (auto-restart on file change).
 
-[./docker-compose.yaml](./docker-compose.yaml) maps the server port to `localhost:3000` and Postgres database is exposed on `localhost:35432`. The connection string is `postgres://user:pass@localhost:35432/db` (username, password and database name are defined in [./docker-compose.yaml](./docker-compose.yaml)).
+[./docker-compose.yaml](./docker-compose.yaml) maps the server port to `localhost:3000` and Postgres database is exposed on `localhost:5432`. The connection string is `postgres://user:pass@localhost:5432/db` (username, password and database name are defined in [./docker-compose.yaml](./docker-compose.yaml)).
 
 ## Database Setup & Management
 
@@ -58,4 +58,4 @@ Knex, SQL query builder for Node.js, is used to connect server to Postgres db an
 
 pgAdmin(https://www.pgadmin.org/download/) is an Open Source administration and management tool for the PostgreSQL database. It includes a graphical administration interface, an SQL query tool, a procedural code debugger and much more.
 
-Create server connection in pgAdmin on `localhost` port `35432`, username, password and database name are defined in [./docker-compose.yaml](./docker-compose.yaml) to manage the database.
+Create server connection in pgAdmin on `localhost` port `5432`, username, password and database name are defined in [./docker-compose.yaml](./docker-compose.yaml) to manage the database.
