@@ -30,14 +30,13 @@ Pre-requisities:
 - Dokcer toolbox (https://docs.docker.com/toolbox/overview/)
 
 Run the following `docker-compose` commands in the root of the project:
-`docker-compose build` builds the server application
-`docker-compose up` brings up the services and runs the application
 
-The above commands bring up docker containers where the server application (React and Express) and database (Postgres) will be running in development mode.
+- `docker-compose build` builds the server application
+- `docker-compose up` brings up the services and runs the application
 
-The [./docker-compose.yaml](./docker-compose.yaml)) file maps the server port to `localhost:3000` and Postgres database is exposed on `localhost:35432`. The connection string is `postgres://user:pass@localhost:35432/db` (username, password and database name are defined in [./docker-compose.yaml](./docker-compose.yaml)).
+The above commands bring up docker containers where the server application (React and Express) and database (Postgres) will be running in development mode using nodemon (auto-restart on file change).
 
-[./docker-compose.yaml](./docker-compose.yaml) is setup to run the application in development mode using nodemon (auto-restart on file change).
+[./docker-compose.yaml](./docker-compose.yaml) maps the server port to `localhost:3000` and Postgres database is exposed on `localhost:35432`. The connection string is `postgres://user:pass@localhost:35432/db` (username, password and database name are defined in [./docker-compose.yaml](./docker-compose.yaml)).
 
 ## Database Setup & Management
 
