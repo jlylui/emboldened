@@ -1,6 +1,8 @@
 import React from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import * as HTTP from "../common/http";
+import ErrorFocus from "./ErrorFocus";
 
 const PartnerFormSchema = Yup.object().shape({
   name: Yup.string()
@@ -26,12 +28,8 @@ const PartnerForm = () => {
       initialValues={initialValues}
       validationSchema={PartnerFormSchema}
       onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
-      }}
-    >
+        HTTP.savePartner(values);
+      }}>
       {({
         values,
         errors,
@@ -45,8 +43,7 @@ const PartnerForm = () => {
           <div
             className={`form-group ${
               touched.name ? (errors.name ? "has-danger" : "has-success") : ""
-            }`}
-          >
+            }`}>
             <label>
               Name<span className="text-danger"> *</span>
             </label>
@@ -65,8 +62,7 @@ const PartnerForm = () => {
           <div
             className={`form-group ${
               touched.email ? (errors.email ? "has-danger" : "has-success") : ""
-            }`}
-          >
+            }`}>
             <label>
               Email<span className="text-danger"> *</span>
             </label>
@@ -104,20 +100,19 @@ const PartnerForm = () => {
             <textarea
               className="form-control"
               name="message"
-              rows="2"
+              rows="4"
               onChange={handleChange}
-              value={values.message}
-            ></textarea>
+              value={values.message}></textarea>
           </div>
           <div style={{ textAlign: "right" }}>
             <button
               type="submit"
               className="btn btn-primary"
-              disabled={isSubmitting}
-            >
+              disabled={isSubmitting}>
               Submit
             </button>
           </div>
+          <ErrorFocus />
         </form>
       )}
     </Formik>

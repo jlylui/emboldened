@@ -1,7 +1,9 @@
 import React from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
+
 import CommonField, { CommonFiledSchema } from "./CommonField";
+import * as HTTP from "../common/http";
 
 const ContactFormSchema = Yup.object().shape({
   ...CommonFiledSchema
@@ -9,10 +11,10 @@ const ContactFormSchema = Yup.object().shape({
 
 const ContactForm = () => {
   const initialValues = {
-    firstName: "",
-    lastName: "",
+    first: "",
+    last: "",
     email: "",
-    countryCode: "",
+    country_code: "",
     phone: "",
     conference: [],
     message: ""
@@ -23,12 +25,8 @@ const ContactForm = () => {
       initialValues={initialValues}
       validationSchema={ContactFormSchema}
       onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
-      }}
-    >
+        HTTP.saveContact(values);
+      }}>
       {({
         values,
         errors,
@@ -54,15 +52,13 @@ const ContactForm = () => {
               name="message"
               rows="2"
               onChange={handleChange}
-              value={values.message}
-            ></textarea>
+              value={values.message}></textarea>
           </div>
           <div style={{ textAlign: "right" }}>
             <button
               type="submit"
               className="btn btn-primary"
-              disabled={isSubmitting}
-            >
+              disabled={isSubmitting}>
               Submit
             </button>
           </div>

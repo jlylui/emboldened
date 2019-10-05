@@ -3,18 +3,18 @@ import Checkbox from "./Checkbox";
 import * as Yup from "yup";
 
 const CommonFiledSchema = {
-  firstName: Yup.string()
+  first: Yup.string()
     .min(2, "*invalid")
     .max(50, "*invalid")
     .required("*required"),
-  lastName: Yup.string()
+  last: Yup.string()
     .min(2, "*invalid")
     .max(50, "*invalid")
     .required("*required"),
   email: Yup.string()
     .email("*invalid email")
     .required("*required"),
-  countryCode: Yup.string()
+  country_code: Yup.string()
     .min(2, "*invalid format")
     .matches(/^\+\d{2,4}/, "*invalid format"),
   phone: Yup.string().matches(/^\d{1}[\d\-\s]{5,}/, "*invalid"),
@@ -30,46 +30,38 @@ const CommonFiled = props => {
       <div className="form-row">
         <div
           className={`form-group col-md-6 ${
-            touched.firstName
-              ? errors.firstName
-                ? "has-danger"
-                : "has-success"
-              : ""
+            touched.first ? (errors.first ? "has-danger" : "has-success") : ""
           }`}>
           <label>
             First Name<span className="text-danger"> *</span>
           </label>
-          {errors.firstName && touched.firstName ? (
-            <span className="error-text">{errors.firstName}</span>
+          {errors.first && touched.first ? (
+            <span className="error-text">{errors.first}</span>
           ) : null}
           <input
             type="text"
             className="form-control"
-            name="firstName"
-            value={values.firstName}
+            name="first"
+            value={values.first}
             onChange={handleChange}
             required={true}
           />
         </div>
         <div
           className={`form-group col-md-6 ${
-            touched.lastName
-              ? errors.lastName
-                ? "has-danger"
-                : "has-success"
-              : ""
+            touched.last ? (errors.last ? "has-danger" : "has-success") : ""
           }`}>
           <label>
             Last Name<span className="text-danger"> *</span>
           </label>
-          {errors.lastName && touched.lastName ? (
-            <span className="error-text">{errors.lastName}</span>
+          {errors.last && touched.last ? (
+            <span className="error-text">{errors.last}</span>
           ) : null}
           <input
             type="text"
             className="form-control"
-            name="lastName"
-            value={values.lastName}
+            name="last"
+            value={values.last}
             onChange={handleChange}
             required={true}
           />
@@ -97,28 +89,28 @@ const CommonFiled = props => {
       </div>
       <div className="form-row">
         <div
-          className={`form-group col-md-4 ${
-            touched.countryCode
-              ? errors.countryCode
+          className={`form-group col-xs-5 ${
+            touched.country_code
+              ? errors.country_code
                 ? "has-danger"
                 : "has-success"
               : ""
           }`}>
           <label>Country code</label>
-          {errors.countryCode && touched.countryCode ? (
-            <span className="error-text">{errors.countryCode}</span>
+          {errors.country_code && touched.country_code ? (
+            <span className="error-text">{errors.country_code}</span>
           ) : null}
           <input
             type="text"
             className="form-control"
-            name="countryCode"
+            name="country_code"
             placeholder="+61"
-            value={values.countryCode}
+            value={values.country_code}
             onChange={handleChange}
           />
         </div>
         <div
-          className={`form-group col-md-8 ${
+          className={`form-group col-xs-7 ${
             touched.phone ? (errors.phone ? "has-danger" : "has-success") : ""
           }`}>
           <label>Phone number</label>

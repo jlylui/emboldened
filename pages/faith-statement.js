@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import Layout from "../components/Layout";
-import { Animated } from "react-animated-css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const faithStatements = [
