@@ -6,6 +6,7 @@
 
 - [React](https://github.com/facebook/react)
 - [NextJS + Custom Express](https://github.com/zeit/next.js/)
+- [Express](https://github.com/expressjs/express)
 - [NodeJS](https://github.com/nodejs/node)
 - [Postgres](https://www.postgresql.org/)
 - [Knex](https://github.com/tgriesser/knex)
@@ -19,15 +20,19 @@ https://www.figma.com/file/USa407muyoA0Fz4X0hdSMq/Wireframe?node-id=0%3A1
 
 ### Run server (without Docker)
 
+Pre-requisites:
+
+- Node.js(https://nodejs.org/en/download/)
+
 `npm install`  
 `npm run dev`
 
 ### Docker
 
-Pre-requisities:
+Pre-requisites:
 
-- Docker for Desktop (https://www.docker.com/products/docker-desktop); or
-- Docker toolbox (https://docs.docker.com/toolbox/overview/)
+- Docker for Desktop(https://www.docker.com/products/docker-desktop); or
+- Docker toolbox(https://docs.docker.com/toolbox/overview/)
 
 Run the following `docker-compose` commands in the root of the project:
 
@@ -44,7 +49,7 @@ The project uses Postgres with the Node Postgres driver (pg on npm). For persist
 
 - `docker volume create --name=pgdata`
 
-[./docker-compose.yaml](./docker-compose.yaml) mounts the volume to database container.
+[./docker-compose.yml](./docker-compose.yml) mounts the volume to database container.
 
 ### Migrations
 
