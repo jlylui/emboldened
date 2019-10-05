@@ -24,18 +24,17 @@ const banner = {
 
 const FaithStatement = () => {
   const statements = faithStatements.map((statement, index) => {
+    let align = "left";
+    let popoverAlign = "right";
+    if (index % 2 === 1) {
+      align = "right";
+      popoverAlign = "left";
+    }
     return (
-      <Animated animationIn="fadeInUp" animationOut="fadeInUp" isVisible={true}>
+      <div key={index} className="animated fadeInUp">
         <div className="row">
-          <div
-            className={`statement-box ${
-              index % 2 != 1 ? "box-left" : "box-right"
-            } `}
-            data-animate-effect="fadeInLeft">
-            <div
-              className={`round-icon ${
-                index % 2 != 1 ? "round-icon-left" : "round-icon-right"
-              }`}>
+          <div className={`statement-box box-${align}`}>
+            <div className={`round-icon round-icon-${align}`}>
               {index % 2 != 1 ? (
                 <FontAwesomeIcon icon="comment" size="2x" flip="horizontal" />
               ) : (
@@ -43,11 +42,7 @@ const FaithStatement = () => {
               )}
             </div>
             <div
-              className={`popover ${
-                index % 2 != 1
-                  ? "bs-popover-right bs-popover-right-docs"
-                  : "bs-popover-left bs-popover-left-docs"
-              }`}>
+              className={`popover bs-popover-${popoverAlign} bs-popover-${popoverAlign}-docs`}>
               <div className="arrow"></div>
               <div className="popover-body">
                 <p>{statement}</p>
@@ -55,7 +50,7 @@ const FaithStatement = () => {
             </div>
           </div>
         </div>
-      </Animated>
+      </div>
     );
   });
 

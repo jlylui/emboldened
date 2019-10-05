@@ -1,5 +1,6 @@
 import "../static/bootstrap.min.css";
 import "../static/theme.css";
+import "../static/animate.css";
 import "./Layout.css";
 
 import Head from "next/head";
@@ -113,9 +114,6 @@ const Layout = props => {
         <title>Emboldened</title> {/*todo make dynamic */}
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"></link>
       </Head>
 
       <NavBar navMenu={navMenu} />
