@@ -156,12 +156,32 @@ ul {
   color: #5a5a5a;
 }
 
-/* Small devices (landscape phones, 576px and up) */
+.modal.show {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.modal-body .modal-footer {
+  padding: 1rem 0;
+}
+
+.modal.show .modal-dialog {
+  top: 2vh;
+}
+
+@media (min-width: 375px) {
+  .modal.show .modal-dialog {
+    top: 10vh;
+  }
+}
 @media (min-width: 425px) {
   .h1-seo {
     font-size: 5rem !important;
   }
+  .modal.show .modal-dialog {
+    top: 10vh;
+  }
 }
+/* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .h1-seo {
     font-size: 6rem !important;

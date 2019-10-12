@@ -6,6 +6,7 @@ import * as HTTP from "../common/http";
 
 import CommonField, { CommonFiledSchema } from "./CommonField";
 import CustomFieldGroup from "./CustomFieldGroup";
+import Checkbox from "./Checkbox";
 import ErrorFocus from "./ErrorFocus";
 
 const regex = /^\w.*\S.*$/;
@@ -84,8 +85,7 @@ const VolunteerForm = () => {
       validationSchema={VolunteerFormSchema}
       onSubmit={(values, { setSubmitting }) => {
         HTTP.saveVolunteer(values);
-      }}
-    >
+      }}>
       {({
         values,
         errors,
@@ -169,8 +169,7 @@ const VolunteerForm = () => {
               name="message"
               rows="2"
               onChange={handleChange}
-              value={values.message}
-            ></textarea>
+              value={values.message}></textarea>
           </div>
           <div style={{ textAlign: "right" }}>
             {Object.values(touched).length > 0 ? (
@@ -181,8 +180,7 @@ const VolunteerForm = () => {
                     paddingRight: "20px",
                     fontWeight: "bold",
                     textTransform: "uppercase"
-                  }}
-                >
+                  }}>
                   *Error in form. Please review inputs.
                 </div>
               ) : null
@@ -190,8 +188,7 @@ const VolunteerForm = () => {
             <button
               type="submit"
               className="btn btn-primary"
-              disabled={isSubmitting}
-            >
+              disabled={isSubmitting}>
               Submit
             </button>
           </div>

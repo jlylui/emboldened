@@ -3,6 +3,7 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 
 import CommonField, { CommonFiledSchema } from "./CommonField";
+import Checkbox from "./Checkbox";
 import * as HTTP from "../common/http";
 
 const ContactFormSchema = Yup.object().shape({
@@ -29,8 +30,7 @@ const RegisterForm = () => {
       validationSchema={ContactFormSchema}
       onSubmit={(values, { setSubmitting }) => {
         HTTP.saveRegistration(values);
-      }}
-    >
+      }}>
       {({
         values,
         errors,
@@ -81,15 +81,13 @@ const RegisterForm = () => {
               name="message"
               rows="2"
               onChange={handleChange}
-              value={values.message}
-            ></textarea>
+              value={values.message}></textarea>
           </div>
           <div style={{ textAlign: "right" }}>
             <button
               type="submit"
               className="btn btn-primary"
-              disabled={isSubmitting}
-            >
+              disabled={isSubmitting}>
               Submit
             </button>
           </div>
