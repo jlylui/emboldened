@@ -84,7 +84,7 @@ const NavBar = props => {
               </a>
             </Link>
             <button
-              className="navbar-toggler navbar-toggler"
+              className={`navbar-toggler ${collapseOpen ? "toggled" : ""}`}
               onClick={() => {
                 document.documentElement.classList.toggle("nav-open");
                 setCollapseOpen(!collapseOpen);

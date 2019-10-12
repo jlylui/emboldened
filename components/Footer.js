@@ -51,12 +51,12 @@ const Footer = props => {
           <ul className="list-inline">{followUs}</ul>
           <div style={{ paddingTop: "20px" }}>
             <div className="row">
-              <div className="col-md-8">
-                <nav>
+              <div className="col-6">
+                <nav style={{ textAlign: "left" }}>
                   <ul>{footerNav}</ul>
                 </nav>
               </div>
-              <div className="col-sm-4">
+              <div className="col-6">
                 <div className="copyright">
                   Made with <FontAwesomeIcon icon={"heart"} /> and{" "}
                   <FontAwesomeIcon icon={"coffee"} /> by Emboldened Team in

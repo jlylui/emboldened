@@ -30,8 +30,8 @@ const BehindTheScenes = () => {
       </div>
       <div className="section">
         <Video
-          url="https://www.youtube.com/embed/xxxxxxxxxx?vq=hd1080"
-          title="Video Title"
+          url="https://www.youtube.com/embed/8QSbdqBqKTY?vq=hd1080"
+          title="Marketplace Discipleship"
         />
       </div>
     </Layout>
