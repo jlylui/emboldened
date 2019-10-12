@@ -58,7 +58,6 @@ const PartnerForm = () => {
               name="name"
               value={values.name}
               onChange={handleChange}
-              required={true}
             />
           </div>
           <div
