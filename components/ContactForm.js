@@ -91,6 +91,9 @@ const ContactForm = props => {
                     <label>
                       Message<span className="text-danger"> *</span>
                     </label>
+                    {errors.message && touched.message ? (
+                      <span className="error-text">{errors.message}</span>
+                    ) : null}
                     <textarea
                       className="form-control"
                       name="message"
