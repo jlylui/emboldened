@@ -49,7 +49,7 @@ const FaithStatement = () => {
 
   return (
     <Layout banner={banner}>
-      <div className="section">
+      <div className="section section-1">
         <div className="container">{statements}</div>
       </div>
     </Layout>

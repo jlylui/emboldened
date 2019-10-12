@@ -12,7 +12,7 @@ const banner = {
 const Index = () => {
   return (
     <Layout banner={banner}>
-      <div className="section">
+      <div className="section section-1">
         <div className="container">
           <h2 id="register">Register Your Interest</h2>
           <RegisterForm />

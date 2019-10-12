@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:200,500|PT+Sans|Roboto+Slab");
 @import url("../static/fonts/stylesheet.css");
 
+.main .section-1 {
+  padding-top: 50px;
+}
+
+.section {
+  padding: 25px 0;
+}
+
 .section .container {
   padding: 0 25px;
 }

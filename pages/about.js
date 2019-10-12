@@ -9,7 +9,7 @@ const banner = {
 const About = () => {
   return (
     <Layout banner={banner}>
-      <div className="section">
+      <div className="section section-1">
         <div className="container">
           <h2>About Emboldened</h2>
           <p>
