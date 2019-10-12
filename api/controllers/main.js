@@ -1,3 +1,28 @@
+const postRegistrationData = (req, res, db) => {
+  const created_at = new Date();
+  db("registrations")
+    .insert({
+      first: req.body.first,
+      last: req.body.last,
+      email: req.body.email,
+      country_code: req.body.country_code,
+      phone: req.body.phone,
+      conference: req.body.conference,
+      message: req.body.message,
+      created_at
+    })
+    .returning("*")
+    .then(item => {
+      res.json(item);
+    })
+    .catch(err => {
+      console.log(err);
+      res
+        .status(400)
+        .json({ dbError: "db error", code: err.code, error: err.detail });
+    });
+};
+
 const postContactData = (req, res, db) => {
   const created_at = new Date();
   db("contacts")
@@ -7,7 +32,6 @@ const postContactData = (req, res, db) => {
       email: req.body.email,
       country_code: req.body.country_code,
       phone: req.body.phone,
-      conference: req.body.conference,
       message: req.body.message,
       created_at
     })
@@ -74,6 +98,7 @@ const postPartnerData = (req, res, db) => {
 };
 
 module.exports = {
+  postRegistrationData,
   postContactData,
   postVolunteerData,
   postPartnerData

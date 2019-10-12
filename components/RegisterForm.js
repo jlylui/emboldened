@@ -6,10 +6,13 @@ import CommonField, { CommonFiledSchema } from "./CommonField";
 import * as HTTP from "../common/http";
 
 const ContactFormSchema = Yup.object().shape({
-  ...CommonFiledSchema
+  ...CommonFiledSchema,
+  conference: Yup.array()
+    .min(1, "*select at least one location")
+    .required("*required")
 });
 
-const ContactForm = () => {
+const RegisterForm = () => {
   const initialValues = {
     first: "",
     last: "",
@@ -25,7 +28,7 @@ const ContactForm = () => {
       initialValues={initialValues}
       validationSchema={ContactFormSchema}
       onSubmit={(values, { setSubmitting }) => {
-        HTTP.saveContact(values);
+        HTTP.saveRegistration(values);
       }}
     >
       {({
@@ -45,6 +48,31 @@ const ContactForm = () => {
             touched={touched}
             handleChange={handleChange}
           />
+          <br />
+          <div className="form-group">
+            <label>
+              Conferences Interested:<span className="text-danger"> *</span>
+            </label>
+            {errors.conference && touched.conference ? (
+              <span className="error-text">{errors.conference}</span>
+            ) : null}
+            <br />
+            <Checkbox
+              name="conference"
+              value="Sydney"
+              className="form-check-inline"
+            />
+            <Checkbox
+              name="conference"
+              value="Perth"
+              className="form-check-inline"
+            />
+            <Checkbox
+              name="conference"
+              value="Kuala Lumpur"
+              className="form-check-inline"
+            />
+          </div>
           <br />
           <div className="form-group">
             <label>Write a Message</label>
@@ -71,4 +99,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default RegisterForm;

@@ -4,12 +4,10 @@ import * as Yup from "yup";
 
 const CommonFiledSchema = {
   first: Yup.string()
-    .min(2, "*invalid")
-    .max(50, "*invalid")
+    .matches(/[A-Za-z]{1,50}/, "*invalid")
     .required("*required"),
   last: Yup.string()
-    .min(2, "*invalid")
-    .max(50, "*invalid")
+    .matches(/[A-Za-z]{1,50}/, "*invalid")
     .required("*required"),
   email: Yup.string()
     .email("*invalid email")
@@ -17,10 +15,7 @@ const CommonFiledSchema = {
   country_code: Yup.string()
     .min(2, "*invalid format")
     .matches(/^\+\d{2,4}/, "*invalid format"),
-  phone: Yup.string().matches(/^\d{1}[\d\-\s]{5,}/, "*invalid"),
-  conference: Yup.array()
-    .min(1, "*select at least one location")
-    .required("*required")
+  phone: Yup.string().matches(/^\d{1}[\d\-\s]{5,}/, "*invalid")
 };
 
 const CommonFiled = props => {
@@ -31,7 +26,8 @@ const CommonFiled = props => {
         <div
           className={`form-group col-md-6 ${
             touched.first ? (errors.first ? "has-danger" : "has-success") : ""
-          }`}>
+          }`}
+        >
           <label>
             First Name<span className="text-danger"> *</span>
           </label>
@@ -44,13 +40,14 @@ const CommonFiled = props => {
             name="first"
             value={values.first}
             onChange={handleChange}
-            required={true}
+            // required={true}
           />
         </div>
         <div
           className={`form-group col-md-6 ${
             touched.last ? (errors.last ? "has-danger" : "has-success") : ""
-          }`}>
+          }`}
+        >
           <label>
             Last Name<span className="text-danger"> *</span>
           </label>
@@ -63,14 +60,15 @@ const CommonFiled = props => {
             name="last"
             value={values.last}
             onChange={handleChange}
-            required={true}
+            // required={true}
           />
         </div>
       </div>
       <div
         className={`form-group ${
           touched.email ? (errors.email ? "has-danger" : "has-success") : ""
-        }`}>
+        }`}
+      >
         <label>
           Email<span className="text-danger"> *</span>
         </label>
@@ -84,7 +82,7 @@ const CommonFiled = props => {
           name="email"
           value={values.email}
           onChange={handleChange}
-          required={true}
+          // required={true}
         />
       </div>
       <div className="form-row">
@@ -95,7 +93,8 @@ const CommonFiled = props => {
                 ? "has-danger"
                 : "has-success"
               : ""
-          }`}>
+          }`}
+        >
           <label>Country code</label>
           {errors.country_code && touched.country_code ? (
             <span className="error-text">{errors.country_code}</span>
@@ -112,7 +111,8 @@ const CommonFiled = props => {
         <div
           className={`form-group col-xs-7 ${
             touched.phone ? (errors.phone ? "has-danger" : "has-success") : ""
-          }`}>
+          }`}
+        >
           <label>Phone number</label>
           {errors.phone && touched.phone ? (
             <span className="error-text">{errors.phone}</span>
@@ -125,31 +125,6 @@ const CommonFiled = props => {
             onChange={handleChange}
           />
         </div>
-      </div>
-      <br />
-      <div className="form-group">
-        <label>
-          Conferences Interested:<span className="text-danger"> *</span>
-        </label>
-        {errors.conference && touched.conference ? (
-          <span className="error-text">{errors.conference}</span>
-        ) : null}
-        <br />
-        <Checkbox
-          name="conference"
-          value="Sydney"
-          className="form-check-inline"
-        />
-        <Checkbox
-          name="conference"
-          value="Perth"
-          className="form-check-inline"
-        />
-        <Checkbox
-          name="conference"
-          value="Kuala Lumpur"
-          className="form-check-inline"
-        />
       </div>
     </>
   );

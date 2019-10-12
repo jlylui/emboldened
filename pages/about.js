@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 
 const banner = {
   title: "About us",
-  subTitle: "Our Mission & Vision; Our Team",
+  subTitle: "",
   image: "../static/img/header-02-about-us.jpg"
 };
 
@@ -11,7 +11,7 @@ const About = () => {
     <Layout banner={banner}>
       <div className="section">
         <div className="container">
-          <h2 style={{ textTransform: "uppercase" }}>About Emboldened</h2>
+          <h2>About Emboldened</h2>
           <p>
             Emboldened was born over countless coffee chats, thousands of
             messages asking difficult questions about work life and the struggle
@@ -29,6 +29,10 @@ const About = () => {
             skills to further their careers and with renewed hearts to reach the
             lost.
           </p>
+        </div>
+      </div>
+      <div className="section">
+        <div className="container">
           <h2>Our vision &amp; mission</h2>
           <ul>
             <li>
@@ -58,7 +62,7 @@ const About = () => {
       </div>
       <div className="section">
         <div className="container">
-          <h2>THE TEAM</h2>
+          <h2>The Team</h2>
           <div className="card mb-3">
             <img
               className="card-img-top"

@@ -13,6 +13,9 @@ module.exports = app => {
     });
   });
 
+  app.post("/api/registrations", (req, res) =>
+    main.postRegistrationData(req, res, db)
+  );
   app.post("/api/contacts", (req, res) => main.postContactData(req, res, db));
   app.post("/api/volunteers", (req, res) =>
     main.postVolunteerData(req, res, db)

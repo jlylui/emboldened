@@ -12,6 +12,9 @@ const regex = /^\w.*\S.*$/;
 
 const VolunteerFormSchema = Yup.object().shape({
   ...CommonFiledSchema,
+  conference: Yup.array()
+    .min(1, "*select at least one location")
+    .required("*required"),
   tmpAvailability: Yup.string().matches(regex, "*invalid format"),
   tmpInterest: Yup.string().matches(regex, "*invalid format"),
   tmpSkill: Yup.string().matches(regex, "*invalid format")
@@ -54,6 +57,7 @@ const skillGroupValues = {
     "Comp. Tech.",
     "First Aid",
     "Worship leader/Musician",
+    "Translator",
     "Other"
   ],
   placeholder: "Click add to include input values"
@@ -80,7 +84,8 @@ const VolunteerForm = () => {
       validationSchema={VolunteerFormSchema}
       onSubmit={(values, { setSubmitting }) => {
         HTTP.saveVolunteer(values);
-      }}>
+      }}
+    >
       {({
         values,
         errors,
@@ -98,6 +103,31 @@ const VolunteerForm = () => {
             touched={touched}
             handleChange={handleChange}
           />
+          <br />
+          <div className="form-group">
+            <label>
+              Conferences Interested:<span className="text-danger"> *</span>
+            </label>
+            {errors.conference && touched.conference ? (
+              <span className="error-text">{errors.conference}</span>
+            ) : null}
+            <br />
+            <Checkbox
+              name="conference"
+              value="Sydney"
+              className="form-check-inline"
+            />
+            <Checkbox
+              name="conference"
+              value="Perth"
+              className="form-check-inline"
+            />
+            <Checkbox
+              name="conference"
+              value="Kuala Lumpur"
+              className="form-check-inline"
+            />
+          </div>
           <br />
           <div className="form-group">
             <label>Where do you attend church?</label>
@@ -139,7 +169,8 @@ const VolunteerForm = () => {
               name="message"
               rows="2"
               onChange={handleChange}
-              value={values.message}></textarea>
+              value={values.message}
+            ></textarea>
           </div>
           <div style={{ textAlign: "right" }}>
             {Object.values(touched).length > 0 ? (
@@ -150,7 +181,8 @@ const VolunteerForm = () => {
                     paddingRight: "20px",
                     fontWeight: "bold",
                     textTransform: "uppercase"
-                  }}>
+                  }}
+                >
                   *Error in form. Please review inputs.
                 </div>
               ) : null
@@ -158,7 +190,8 @@ const VolunteerForm = () => {
             <button
               type="submit"
               className="btn btn-primary"
-              disabled={isSubmitting}>
+              disabled={isSubmitting}
+            >
               Submit
             </button>
           </div>

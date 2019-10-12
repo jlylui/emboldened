@@ -68,12 +68,12 @@ const navMenu = [
     icon: "video"
   },
   {
-    label: "Contact Us",
-    link: "/#contact",
+    label: "Register for Conference",
+    link: "/#register",
     icon: "envelope"
   },
   {
-    label: "Get Invovled",
+    label: "Get Involved",
     link: "/get-involved",
     icon: "handshake"
   },
@@ -86,7 +86,7 @@ const navMenu = [
 
 const socialMedia = [
   {
-    icon: ["fab", "facebook"],
+    icon: ["fab", "linkedin"],
     link: ""
   },
   {
@@ -95,14 +95,6 @@ const socialMedia = [
   },
   {
     icon: ["fab", "youtube"],
-    link: ""
-  },
-  {
-    icon: ["fab", "twitter"],
-    link: ""
-  },
-  {
-    icon: ["fab", "pinterest"],
     link: ""
   }
 ];
@@ -120,13 +112,15 @@ const Layout = props => {
 
       <div
         className={`${props.banner.className} page-header clear-filter `}
-        filter-color="black">
+        filter-color="black"
+      >
         <div
           className="page-header-image"
           data-parallax="true"
           style={{
             backgroundImage: `url(${props.banner.image})`
-          }}></div>
+          }}
+        ></div>
         <div className="container">
           <div className="content-center">
             <h1 className="h1-seo">{props.banner.title}</h1>

@@ -1,10 +1,10 @@
 import Layout from "../components/Layout";
-import ContactForm from "../components/ContactForm";
+import RegisterForm from "../components/RegisterForm";
 
 const banner = {
-  title: "Emboldened by His Spirit",
-  subTitle: `Our conference launches in year 2021 in three cities – Sydney & Perth, Australia + Kuala Lumpur, Malaysia. 
-    Leave your details with us! We’ll send a reminder when registration opens near you.`,
+  title: "Emboldened by\nHis Spirit",
+  subTitle:
+    "Our conference launches in year 2021 in three cities –\nSydney & Perth, Australia & Kuala Lumpur, Malaysia.\nRegister your interest below.",
   image: "../static/img/header-01.jpg",
   className: "home-page"
 };
@@ -14,8 +14,8 @@ const Index = () => {
     <Layout banner={banner}>
       <div className="section">
         <div className="container">
-          <h2 id="contact">Contact Us</h2>
-          <ContactForm />
+          <h2 id="register">Register Your Interest</h2>
+          <RegisterForm />
         </div>
       </div>
     </Layout>

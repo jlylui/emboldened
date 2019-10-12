@@ -2,7 +2,7 @@
 @import url("../static/fonts/stylesheet.css");
 
 .section .container {
-  padding: 0 18px;
+  padding: 0 25px;
 }
 
 .navbar-brand {
@@ -12,16 +12,17 @@
 .h1-seo {
   font-family: "Darkline Regular";
   font-size: 4.5rem;
-  /* text-transform: uppercase; */
   font-weight: 200;
   text-shadow: 2px 2px rgba(99, 67, 0, 0.6);
   color: rgb(228, 197, 135);
+  white-space: pre-wrap;
 }
 
 .h3-seo {
   font-family: "Roboto Slab";
   text-shadow: 2px 2px rgba(124, 123, 121, 0.6);
   font-size: 1.25em;
+  white-space: pre-wrap;
 }
 
 ul {
@@ -33,10 +34,10 @@ ul {
 }
 
 .index-page .page-header {
-  height: 50vh;
+  height: 60vh;
 }
 .page-header {
-  min-height: 50vh;
+  min-height: 60vh;
   max-height: 999px;
 }
 .index-page .page-header .container > .content-center {
