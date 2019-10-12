@@ -1,6 +1,6 @@
 # emboldened
 
-> A full-stack project for a server side rendering website.
+> A full-stack project for a static and server-rendered website with Node.js.
 
 ### Stack
 
