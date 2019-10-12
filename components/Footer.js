@@ -50,17 +50,19 @@ const Footer = props => {
           <p className="text-muted">&copy;{date} Emboldened. Follow us</p>
           <ul className="list-inline">{followUs}</ul>
           <div style={{ paddingTop: "20px" }}>
-            <nav>
-              <ul>
-                {footerNav}
-                {/* <li>
-                  <a onClick={handleContactModal}>Click Me</a>
-                </li> */}
-              </ul>
-            </nav>
-            <div className="copyright">
-              Made with <FontAwesomeIcon icon={"heart"} /> and{" "}
-              <FontAwesomeIcon icon={"coffee"} /> by Emboldened Team in Sydney
+            <div className="row">
+              <div className="col-md-8">
+                <nav>
+                  <ul>{footerNav}</ul>
+                </nav>
+              </div>
+              <div className="col-sm-4">
+                <div className="copyright">
+                  Made with <FontAwesomeIcon icon={"heart"} /> and{" "}
+                  <FontAwesomeIcon icon={"coffee"} /> by Emboldened Team in
+                  Sydney
+                </div>
+              </div>
             </div>
           </div>
         </div>

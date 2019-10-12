@@ -1,4 +1,6 @@
+import React from "react";
 import Layout from "../components/Layout";
+import Video from "../components/Video";
 
 const banner = {
   title: "Behind the Scenes",
@@ -25,6 +27,12 @@ const BehindTheScenes = () => {
             inspiration.
           </p>
         </div>
+      </div>
+      <div className="section">
+        <Video
+          url="https://www.youtube.com/embed/xxxxxxxxxx?vq=hd1080"
+          title="Video Title"
+        />
       </div>
     </Layout>
   );
