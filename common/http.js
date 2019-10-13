@@ -12,11 +12,10 @@ export const saveRegistration = async data => {
     };
     const response = await fetch("/api/registrations", options);
     const json = await response.json();
-    console.log(response);
-    console.log(json);
+
     if (response.status === 200) {
       setTimeout(() => {
-        alert(`Successfully submitted form: ${JSON.stringify(json)}`);
+        // alert(`Successfully submitted form: ${JSON.stringify(json)}`);
         // window.location.href = "/#register";
         location.reload();
       }, 400);
@@ -44,11 +43,10 @@ export const saveContact = async data => {
     };
     const response = await fetch("/api/contacts", options);
     const json = await response.json();
-    console.log(response);
-    console.log(json);
+
     if (response.status === 200) {
       setTimeout(() => {
-        alert(`Successfully submitted form: ${JSON.stringify(json)}`);
+        // alert(`Successfully submitted form: ${JSON.stringify(json)}`);
         // window.location.href = "/#contact";
         location.reload();
       }, 400);
@@ -76,11 +74,10 @@ export const saveVolunteer = async data => {
     };
     const response = await fetch("/api/volunteers", options);
     const json = await response.json();
-    console.log(response);
-    console.log(json);
+
     if (response.status === 200) {
       setTimeout(() => {
-        alert(`Successfully submitted form: ${JSON.stringify(json)}`);
+        // alert(`Successfully submitted form: ${JSON.stringify(json)}`);
         location.reload();
       }, 400);
     } else {
@@ -107,11 +104,10 @@ export const savePartner = async data => {
     };
     const response = await fetch("/api/partners", options);
     const json = await response.json();
-    console.log(response);
-    console.log(json);
+
     if (response.status === 200) {
       setTimeout(() => {
-        alert(`Successfully submitted form: ${JSON.stringify(json)}`);
+        // alert(`Successfully submitted form: ${JSON.stringify(json)}`);
         location.reload();
       }, 400);
     } else {
