@@ -3,7 +3,7 @@
 }
 
 .navbar .navbar-nav .nav-link:not(.btn) {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .navbar .navbar-brand {
@@ -16,4 +16,11 @@
 
 .navbar.bg-white:not(.navbar-transparent) a:not(.dropdown-item):not(.btn) {
   color: #666;
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .navbar .navbar-nav .nav-link:not(.btn) {
+    font-size: 0.8rem;
+  }
 }

@@ -1,8 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:200,500|PT+Sans|Roboto+Slab");
 @import url("../static/fonts/stylesheet.css");
 
+.main .section-1 {
+  padding-top: 50px;
+}
+
+.section {
+  padding: 25px 0;
+}
+
 .section .container {
-  padding: 0 18px;
+  padding: 0 25px;
 }
 
 .navbar-brand {
@@ -12,16 +20,29 @@
 .h1-seo {
   font-family: "Darkline Regular";
   font-size: 4.5rem;
-  /* text-transform: uppercase; */
   font-weight: 200;
   text-shadow: 2px 2px rgba(99, 67, 0, 0.6);
   color: rgb(228, 197, 135);
+  white-space: pre-wrap;
+  padding-bottom: 10px;
 }
 
 .h3-seo {
-  font-family: "Roboto Slab";
+  /* font-family: "Roboto Slab"; */
   text-shadow: 2px 2px rgba(124, 123, 121, 0.6);
-  font-size: 1.25em;
+  font-size: 1em;
+  font-weight: 500;
+  white-space: pre-wrap;
+}
+.h3-seo a {
+  color: #ffffff;
+}
+
+.h2,
+.h3,
+h2,
+h3 {
+  font-family: Roboto Slab;
 }
 
 ul {
@@ -33,10 +54,10 @@ ul {
 }
 
 .index-page .page-header {
-  height: 50vh;
+  height: 60vh;
 }
 .page-header {
-  min-height: 50vh;
+  min-height: 60vh;
   max-height: 999px;
 }
 .index-page .page-header .container > .content-center {
@@ -155,24 +176,115 @@ ul {
   color: #5a5a5a;
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 425px) {
+.modal.show {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.modal-body .modal-footer {
+  padding: 1rem 0;
+}
+
+.media-container {
+  width: 100%;
+}
+
+.media-frame {
+  width: 100%;
+  height: 151.875px;
+}
+@media (max-height: 414px) {
   .h1-seo {
-    font-size: 5rem !important;
+    font-size: 4.5rem !important;
+    padding-bottom: 0px !important;
+  }
+  .h3-seo {
+    padding-bottom: 10px;
+    font-size: 1em !important;
+  }
+  .index-page .page-header .container > .content-center {
+    top: 60%;
   }
 }
+
+@media (max-height: 568px) {
+  .modal-content .modal-body {
+    padding: 24px 24px 16px;
+    line-height: 0.8;
+    font-size: 12px;
+  }
+  .index-page .page-header .container > .content-center {
+    top: 60% !important;
+  }
+}
+
+@media (min-height: 640px) and (max-width: 667px) {
+  .modal-content .modal-body {
+    padding: 24px 24px 16px;
+    line-height: 1.6;
+    font-size: 12px;
+  }
+}
+
+@media (min-height: 740px) {
+  .modal-content .modal-body {
+    padding: 24px 24px 16px;
+    line-height: 1.6;
+    font-size: 12px;
+  }
+  .modal.show .modal-dialog {
+    top: 5%;
+  }
+}
+
+@media (min-width: 360px) {
+  .media-frame {
+    height: 174.375px;
+  }
+}
+
+@media (min-width: 375px) {
+  .h1-seo {
+    font-size: 5rem;
+  }
+  .media-frame {
+    height: 182.8125px;
+  }
+  .modal.show .modal-dialog {
+    top: 5%;
+  }
+}
+@media (min-width: 425px) {
+  .h3-seo {
+    font-size: 1.2em;
+  }
+  .media-frame {
+    height: 210.9375px;
+    /* width: 375 */
+  }
+  .modal.show .modal-dialog {
+    top: 10%;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .h1-seo {
-    font-size: 6rem !important;
+    font-size: 6rem;
+  }
+  .h3-seo {
+    font-size: 1.4em;
+  }
+  .media-frame {
+    height: 275.625px;
+    /* width: 490 */
   }
 }
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .h1-seo {
-    font-size: 7rem !important;
+    font-size: 8rem;
   }
   .h3-seo {
-    font-size: 1.825em !important;
+    font-size: 1.825em;
   }
   .box-left .popover {
     margin-right: 1.5rem;
@@ -181,15 +293,15 @@ ul {
     text-align: right;
     margin-left: 10rem;
   }
+  .media-frame {
+    height: 376.875px;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .h1-seo {
-    font-size: 8rem !important;
-  }
-  .h3-seo {
-    font-size: 2em !important;
+    font-size: 9rem;
   }
   .index-page .page-header .container > .content-center {
     top: 60%;
@@ -206,17 +318,17 @@ ul {
   .box-right {
     margin-right: 3rem;
   }
+  .media-frame {
+    height: 511.875px;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .h1-seo {
-    font-size: 9rem !important;
+    font-size: 9rem;
   }
-  .h3-seo {
-    font-size: 2.1em !important;
-  }
-  .index-page .page-header .container > .content-center {
-    top: 60%;
+  .media-frame {
+    height: 613.125px;
   }
 }

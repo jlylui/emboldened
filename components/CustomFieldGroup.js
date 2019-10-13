@@ -42,7 +42,8 @@ const CustomFieldGroup = props => {
                 //   value => value !== "Other" && value !== ""
                 // );
                 // form.setFieldValue(props.name, nextValue);
-              }}>
+              }}
+            >
               <FontAwesomeIcon icon="plus" />
             </a>
           );
@@ -79,21 +80,25 @@ const CustomFieldGroup = props => {
               minWidth: "80%",
               display: "inline-block",
               paddingLeft: "10px"
-            }}>
+            }}
+          >
             <textarea
               className="form-control"
               name={groupValues.tmp}
               rows="1"
               placeholder={groupValues.placeholder}
               onChange={handleChange}
-              value={values[groupValues.tmp]}></textarea>
+              value={values[groupValues.tmp]}
+            ></textarea>
             {errors[groupValues.tmp] ? (
               <span className="error-text">{errors[groupValues.tmp]}</span>
             ) : null}
           </div>
         </div>
       ) : null}
-      {values[groupValues.tmp] === "" && values[groupValues.name].length > 0 ? (
+      {/* {
+        // For debugging purpose:
+        values[groupValues.tmp] === "" && values[groupValues.name].length > 0 ? (
         <div
           className="text-success"
           style={{
@@ -104,7 +109,8 @@ const CustomFieldGroup = props => {
           <span style={{ fontWeight: "bold" }}>Selected values:</span>
           <br />[{values[groupValues.name].toString()}]
         </div>
-      ) : null}
+      ) : null
+      } */}
     </div>
   );
 };

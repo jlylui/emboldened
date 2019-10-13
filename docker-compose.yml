@@ -1,0 +1,43 @@
+version: "3"
+
+services:
+  app:
+    container_name: web_app
+    ports:
+      - "3000:3000"
+    build:
+      context: .
+      dockerfile: dockerfile
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgres://user:pass@postgres:5432/db
+      NODE_ENV: development
+      PORT: 3000
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    networks:
+      - nodeapp-network
+  postgres:
+    image: postgres # pull the newest release
+    environment:
+      POSTGRES_USER: user # setup unsername
+      POSTGRES_PASSWORD: pass # setup password
+      POSTGRES_DB: db # setup database name
+    ports:
+      - "5432:5432"
+    # set up a volume - database is not lost after shutting down the container
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - nodeapp-network
+
+networks:
+  nodeapp-network:
+    driver: bridge
+
+volumes:
+  pgdata:
+    external: true

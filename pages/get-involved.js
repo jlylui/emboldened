@@ -64,7 +64,7 @@ const GetInvolved = () => {
 
   return (
     <Layout banner={banner}>
-      <div className="section">
+      <div className="section section-1">
         <div className="container">
           <div className="card" id={volunteer.id}>
             <div className="card-body">
@@ -74,14 +74,16 @@ const GetInvolved = () => {
                 <a
                   href={volunteer.link}
                   data-toggle="collapse"
-                  onClick={handleVolunteerFormClick}>
+                  onClick={handleVolunteerFormClick}
+                >
                   {volunteer.linkLabel}{" "}
                   <i className="now-ui-icons arrows-1_minimal-down"></i>
                 </a>
               </div>
               <div
                 className={`collapse ${formShow}`}
-                style={{ paddingTop: "20px" }}>
+                style={{ paddingTop: "20px" }}
+              >
                 <div className="card-header">
                   <h6>{volunteer.formTitle}</h6>
                 </div>
@@ -97,14 +99,16 @@ const GetInvolved = () => {
                 <a
                   href={partner.link}
                   data-toggle="collapse"
-                  onClick={handlePartnerFormClick}>
+                  onClick={handlePartnerFormClick}
+                >
                   {partner.linkLabel}{" "}
                   <i className="now-ui-icons arrows-1_minimal-down"></i>
                 </a>
               </div>
               <div
                 className={`collapse ${partnerFormShow}`}
-                style={{ paddingTop: "20px" }}>
+                style={{ paddingTop: "20px" }}
+              >
                 <div className="card-header">
                   <h6>{partner.formTitle}</h6>
                 </div>

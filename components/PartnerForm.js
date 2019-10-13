@@ -1,6 +1,8 @@
 import React from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import * as HTTP from "../common/http";
+import ErrorFocus from "./ErrorFocus";
 
 const PartnerFormSchema = Yup.object().shape({
   name: Yup.string()
@@ -26,10 +28,7 @@ const PartnerForm = () => {
       initialValues={initialValues}
       validationSchema={PartnerFormSchema}
       onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
+        HTTP.savePartner(values);
       }}
     >
       {({
@@ -59,7 +58,6 @@ const PartnerForm = () => {
               name="name"
               value={values.name}
               onChange={handleChange}
-              required={true}
             />
           </div>
           <div
@@ -104,7 +102,7 @@ const PartnerForm = () => {
             <textarea
               className="form-control"
               name="message"
-              rows="2"
+              rows="5"
               onChange={handleChange}
               value={values.message}
             ></textarea>
@@ -118,6 +116,7 @@ const PartnerForm = () => {
               Submit
             </button>
           </div>
+          <ErrorFocus />
         </form>
       )}
     </Formik>

@@ -2,14 +2,20 @@ import React, { useState } from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 
+import * as HTTP from "../common/http";
+
 import CommonField, { CommonFiledSchema } from "./CommonField";
 import CustomFieldGroup from "./CustomFieldGroup";
+import Checkbox from "./Checkbox";
 import ErrorFocus from "./ErrorFocus";
 
 const regex = /^\w.*\S.*$/;
 
 const VolunteerFormSchema = Yup.object().shape({
   ...CommonFiledSchema,
+  conference: Yup.array()
+    .min(1, "*select at least one location")
+    .required("*required"),
   tmpAvailability: Yup.string().matches(regex, "*invalid format"),
   tmpInterest: Yup.string().matches(regex, "*invalid format"),
   tmpSkill: Yup.string().matches(regex, "*invalid format")
@@ -52,6 +58,7 @@ const skillGroupValues = {
     "Comp. Tech.",
     "First Aid",
     "Worship leader/Musician",
+    "Translator",
     "Other"
   ],
   placeholder: "Click add to include input values"
@@ -59,10 +66,10 @@ const skillGroupValues = {
 
 const VolunteerForm = () => {
   const initialValues = {
-    firstName: "",
-    lastName: "",
+    first: "",
+    last: "",
     email: "",
-    countryCode: "",
+    country_code: "",
     phone: "",
     conference: [],
     church: "",
@@ -77,10 +84,7 @@ const VolunteerForm = () => {
       initialValues={initialValues}
       validationSchema={VolunteerFormSchema}
       onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
+        HTTP.saveVolunteer(values);
       }}>
       {({
         values,
@@ -99,6 +103,31 @@ const VolunteerForm = () => {
             touched={touched}
             handleChange={handleChange}
           />
+          <br />
+          <div className="form-group">
+            <label>
+              Conferences Interested:<span className="text-danger"> *</span>
+            </label>
+            {errors.conference && touched.conference ? (
+              <span className="error-text">{errors.conference}</span>
+            ) : null}
+            <br />
+            <Checkbox
+              name="conference"
+              value="Sydney"
+              className="form-check-inline"
+            />
+            <Checkbox
+              name="conference"
+              value="Perth"
+              className="form-check-inline"
+            />
+            <Checkbox
+              name="conference"
+              value="Kuala Lumpur"
+              className="form-check-inline"
+            />
+          </div>
           <br />
           <div className="form-group">
             <label>Where do you attend church?</label>
