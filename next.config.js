@@ -3,6 +3,10 @@ const withCSS = require("@zeit/next-css");
 
 module.exports = withCSS({
   assetPrefix: process.env.NODE_ENV === "production" ? "/emboldened" : "",
+  publicRuntimeConfig: {
+    // used in '/components/Link.js/', for more details go to the component itself
+    linkPrefix: process.env.NODE_ENV === "production" ? "/emboldened" : ""
+  },
   webpack: function(config) {
     config.module.rules.push({
       test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,

@@ -9,7 +9,7 @@
     "start": "next start",
     "migrate": "knex --knexfile ./api/knexfile.js migrate:latest",
     "export": "next export",
-    "deploy": "next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin gh-pages"
+    "deploy": "next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin gh-pages -t -d out"
   },
   "repository": {
     "type": "git",
