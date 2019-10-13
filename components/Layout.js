@@ -100,6 +100,7 @@ const socialMedia = [
 ];
 
 const Layout = props => {
+  console.log(props);
   return (
     <div>
       <Head>
@@ -122,7 +123,12 @@ const Layout = props => {
         <div className="container">
           <div className="content-center">
             <h1 className="h1-seo">{props.banner.title}</h1>
-            <h3 className="h3-seo">{props.banner.subTitle}</h3>
+            <h3 className="h3-seo">
+              {props.banner.subTitle}
+              <a className="nav-link" href={props.banner.linkRef}>
+                {props.banner.linkLabel}
+              </a>
+            </h3>
           </div>
         </div>
       </div>

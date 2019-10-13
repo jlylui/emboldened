@@ -3,10 +3,11 @@ import RegisterForm from "../components/RegisterForm";
 
 const banner = {
   title: "Emboldened by His Spirit",
-  subTitle:
-    "Our conference launches in year 2021\nRegister your interest below",
+  subTitle: "Our conference launches in year 2021",
   image: "../static/img/header-01.jpg",
-  className: "home-page"
+  className: "home-page",
+  linkRef: "/#register",
+  linkLabel: "Register your interest below"
 };
 
 const Index = () => {
