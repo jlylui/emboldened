@@ -7,7 +7,9 @@
     "dev": "nodemon -L server.js",
     "build": "next build",
     "start": "next start",
-    "migrate": "knex --knexfile ./api/knexfile.js migrate:latest"
+    "migrate": "knex --knexfile ./api/knexfile.js migrate:latest",
+    "export": "next export",
+    "deploy": "next build && next export && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/jlylui/emboldened/issues"
   },
-  "homepage": "https://github.com/jlylui/emboldened#readme",
+  "homepage": "https://github.com/jlylui/emboldened",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "@fortawesome/free-brands-svg-icons": "^5.10.2",
@@ -32,6 +34,7 @@
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "formik": "^1.5.8",
+    "gh-pages": "^2.1.1",
     "helmet": "^3.21.1",
     "isomorphic-unfetch": "^3.0.0",
     "knex": "^0.19.4",
