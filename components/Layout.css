@@ -24,6 +24,7 @@
   text-shadow: 2px 2px rgba(99, 67, 0, 0.6);
   color: rgb(228, 197, 135);
   white-space: pre-wrap;
+  padding-bottom: 10px;
 }
 
 .h3-seo {
@@ -185,7 +186,7 @@ ul {
     font-size: 4.5rem !important;
   }
   .h3-seo {
-    font-size: 1em !important;
+    font-size: 0.85em !important;
     padding-bottom: 10px;
   }
   .index-page .page-header .container > .content-center {

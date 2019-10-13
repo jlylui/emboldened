@@ -2,9 +2,9 @@ import Layout from "../components/Layout";
 import RegisterForm from "../components/RegisterForm";
 
 const banner = {
-  title: "Emboldened by\nHis Spirit",
+  title: "Emboldened by His Spirit",
   subTitle:
-    "Our conference launches in year 2021 in three cities –\nSydney & Perth, Australia & Kuala Lumpur, Malaysia.\n\nRegister your interest below.",
+    "Our conference launches in year 2021\nRegister your interest below",
   image: "../static/img/header-01.jpg",
   className: "home-page"
 };
