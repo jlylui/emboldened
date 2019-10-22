@@ -102,7 +102,7 @@ const socialMedia = [
 const assetPrefix = process.env.ASSET_PREFIX;
 
 const Layout = props => {
-  console.log(props);
+  // console.log(props);
   return (
     <div>
       <Head>

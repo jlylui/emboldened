@@ -36,7 +36,7 @@ const ContactForm = props => {
   };
 
   useEffect(() => {
-    document.addEventListener("mousedown", updateContactModal);
+    window.addEventListener("mousedown", updateContactModal);
     return function cleanup() {
       window.removeEventListener("mousedown", updateContactModal);
     };
@@ -47,8 +47,7 @@ const ContactForm = props => {
       className="modal fade show"
       id="contact"
       role="dialog"
-      style={props.show ? { display: "block" } : { display: "none" }}
-    >
+      style={props.show ? { display: "block" } : { display: "none" }}>
       <div className="modal-dialog" ref={contactRef}>
         <div className="modal-content">
           <div className="modal-header">
@@ -56,8 +55,7 @@ const ContactForm = props => {
             <button
               type="button"
               className="close"
-              onClick={props.handleContactModal}
-            >
+              onClick={props.handleContactModal}>
               <span>&times;</span>
             </button>
           </div>
@@ -67,8 +65,7 @@ const ContactForm = props => {
               validationSchema={ContactFormSchema}
               onSubmit={(values, { setSubmitting }) => {
                 HTTP.saveContact(values);
-              }}
-            >
+              }}>
               {({
                 values,
                 errors,
@@ -99,22 +96,19 @@ const ContactForm = props => {
                       name="message"
                       rows="2"
                       onChange={handleChange}
-                      value={values.message}
-                    ></textarea>
+                      value={values.message}></textarea>
                   </div>
                   <div className="modal-footer">
                     <button
                       type="button"
                       className="btn btn-secondary"
-                      onClick={props.handleContactModal}
-                    >
+                      onClick={props.handleContactModal}>
                       Close
                     </button>
                     <button
                       type="submit"
                       className="btn btn-primary"
-                      disabled={isSubmitting}
-                    >
+                      disabled={isSubmitting}>
                       Submit
                     </button>
                   </div>
