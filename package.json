@@ -2,7 +2,7 @@
   "name": "emboldened",
   "version": "1.0.0",
   "description": "web development",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "dev": "nodemon -L server.js",
     "build": "next build",
