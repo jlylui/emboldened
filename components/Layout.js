@@ -120,7 +120,7 @@ const Layout = props => {
           className="page-header-image"
           data-parallax="true"
           style={{
-            backgroundImage: `url(${assetPrefix}/${props.banner.image})`
+            backgroundImage: `url(${assetPrefix}${props.banner.image})`
           }}></div>
         <div className="container">
           <div className="content-center">

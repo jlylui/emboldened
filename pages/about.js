@@ -5,7 +5,7 @@ const banner = {
   subTitle: "",
   image: "/static/img/header-02-about-us.jpg"
 };
-
+const assetPrefix = process.env.ASSET_PREFIX;
 const About = () => {
   return (
     <Layout banner={banner}>
@@ -66,7 +66,7 @@ const About = () => {
           <div className="card mb-3">
             <img
               className="card-img-top"
-              src={`../static/img/header-06-faith-statement.jpg`}
+              src={`${assetPrefix}/static/img/header-06-faith-statement.jpg`}
               width="80%"
               alt="Card image cap"
             />
