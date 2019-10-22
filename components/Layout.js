@@ -6,6 +6,7 @@ import "./Layout.css";
 import Head from "next/head";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import Link from "./Link";
 
 import { library, config } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -132,9 +133,9 @@ const Layout = props => {
             <h1 className="h1-seo">{props.banner.title}</h1>
             <h3 className="h3-seo">
               {props.banner.subTitle}
-              <a className="nav-link" href={props.banner.linkRef}>
-                {props.banner.linkLabel}
-              </a>
+              <Link href={props.banner.linkRef}>
+                <a className="nav-link">{props.banner.linkLabel}</a>
+              </Link>
             </h3>
           </div>
         </div>
