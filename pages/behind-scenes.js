@@ -5,7 +5,7 @@ import Video from "../components/Video";
 const banner = {
   title: "Behind the Scenes",
   subTitle: "",
-  image: "../static/img/header-03-behind-the-scenes.jpg"
+  image: "/static/img/header-03-behind-the-scenes.jpg"
 };
 
 const BehindTheScenes = () => {

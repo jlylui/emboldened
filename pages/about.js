@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 const banner = {
   title: "About us",
   subTitle: "",
-  image: "../static/img/header-02-about-us.jpg"
+  image: "/static/img/header-02-about-us.jpg"
 };
 
 const About = () => {

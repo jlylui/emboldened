@@ -18,7 +18,7 @@ const faithStatements = [
 const banner = {
   title: "Faith Statement",
   subTitle: "",
-  image: "../static/img/header-06-faith-statement.jpg"
+  image: "/static/img/header-06-faith-statement.jpg"
 };
 
 const FaithStatement = () => {
@@ -34,8 +34,7 @@ const FaithStatement = () => {
         <div className="row">
           <div className={`statement-box box-${align}`}>
             <div
-              className={`popover bs-popover-${popoverAlign} bs-popover-${popoverAlign}-docs`}
-            >
+              className={`popover bs-popover-${popoverAlign} bs-popover-${popoverAlign}-docs`}>
               <div className="arrow"></div>
               <div className="popover-body">
                 <p>{statement}</p>

@@ -6,7 +6,7 @@ import PartnerForm from "../components/PartnerForm";
 const banner = {
   title: "Get Involved",
   subTitle: "",
-  image: "../static/img/header-05-get-involved.jpg"
+  image: "/static/img/header-05-get-involved.jpg"
 };
 
 const volunteer = {
@@ -74,16 +74,14 @@ const GetInvolved = () => {
                 <a
                   href={volunteer.link}
                   data-toggle="collapse"
-                  onClick={handleVolunteerFormClick}
-                >
+                  onClick={handleVolunteerFormClick}>
                   {volunteer.linkLabel}{" "}
                   <i className="now-ui-icons arrows-1_minimal-down"></i>
                 </a>
               </div>
               <div
                 className={`collapse ${formShow}`}
-                style={{ paddingTop: "20px" }}
-              >
+                style={{ paddingTop: "20px" }}>
                 <div className="card-header">
                   <h6>{volunteer.formTitle}</h6>
                 </div>
@@ -99,16 +97,14 @@ const GetInvolved = () => {
                 <a
                   href={partner.link}
                   data-toggle="collapse"
-                  onClick={handlePartnerFormClick}
-                >
+                  onClick={handlePartnerFormClick}>
                   {partner.linkLabel}{" "}
                   <i className="now-ui-icons arrows-1_minimal-down"></i>
                 </a>
               </div>
               <div
                 className={`collapse ${partnerFormShow}`}
-                style={{ paddingTop: "20px" }}
-              >
+                style={{ paddingTop: "20px" }}>
                 <div className="card-header">
                   <h6>{partner.formTitle}</h6>
                 </div>

@@ -99,6 +99,8 @@ const socialMedia = [
   }
 ];
 
+const assetPrefix = process.env.ASSET_PREFIX;
+
 const Layout = props => {
   console.log(props);
   return (
@@ -118,7 +120,7 @@ const Layout = props => {
           className="page-header-image"
           data-parallax="true"
           style={{
-            backgroundImage: `url(${props.banner.image})`
+            backgroundImage: `url(${assetPrefix}/${props.banner.image})`
           }}></div>
         <div className="container">
           <div className="content-center">
