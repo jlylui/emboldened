@@ -133,7 +133,7 @@ const Layout = props => {
             <h1 className="h1-seo">{props.banner.title}</h1>
             <h3 className="h3-seo">
               {props.banner.subTitle}
-              <Link href={props.banner.linkRef}>
+              <Link href={`${props.banner.linkRef}`}>
                 <a className="nav-link">{props.banner.linkLabel}</a>
               </Link>
             </h3>
