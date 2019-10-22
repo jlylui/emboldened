@@ -126,17 +126,19 @@ const Layout = props => {
           className="page-header-image"
           data-parallax="true"
           style={{
-            backgroundImage: `url(${assetPrefix}${props.banner.image})`
+            backgroundImage: `url("${assetPrefix}${props.banner.image}")`
           }}></div>
         <div className="container">
           <div className="content-center">
             <h1 className="h1-seo">{props.banner.title}</h1>
-            <h3 className="h3-seo">
-              {props.banner.subTitle}
-              <Link href={`${props.banner.linkRef}`}>
-                <a className="nav-link">{props.banner.linkLabel}</a>
-              </Link>
-            </h3>
+            {props.banner.linkRef !== "" ? (
+              <h3 className="h3-seo">
+                {props.banner.subTitle}
+                <Link href={`${props.banner.linkRef}`}>
+                  <a className="nav-link">{props.banner.linkLabel}</a>
+                </Link>
+              </h3>
+            ) : null}
           </div>
         </div>
       </div>
