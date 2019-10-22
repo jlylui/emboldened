@@ -70,8 +70,7 @@ const NavBar = props => {
       <nav
         className={"navbar navbar-expand-lg bg-white fixed-top " + navbarColor}
         expand="lg"
-        color="info"
-      >
+        color="info">
         <div className="container">
           <div className="navbar-translate">
             <Link href={props.navMenu[0].link}>
@@ -92,8 +91,7 @@ const NavBar = props => {
                 setCollapseOpen(!collapseOpen);
               }}
               aria-expanded={collapseOpen}
-              type="button"
-            >
+              type="button">
               <span className="navbar-toggler-bar top-bar"></span>
               <span className="navbar-toggler-bar middle-bar"></span>
               <span className="navbar-toggler-bar bottom-bar"></span>

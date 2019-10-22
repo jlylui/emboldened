@@ -8,16 +8,13 @@
  * This HOC solves the problem, by adding the prefix (which is defined in next.config.js)
  * to 'as' property
  */
-import Link from "next/link";
-import getConfig from "next-server/config";
+import React from "react";
+import NextJsLink from "next/link";
 
-const { publicRuntimeConfig } = getConfig();
-const linkPrefix = publicRuntimeConfig.linkPrefix;
+const assetPrefix = process.env.ASSET_PREFIX;
 
-const PrefixedLink = ({ href, as = href, children }) => (
-  <Link href={href} as={`${linkPrefix}${as}`}>
-    {children}
-  </Link>
+const Link = ({ href, ...rest }) => (
+  <NextJsLink href={href} as={`${assetPrefix}${href}`} {...rest} />
 );
 
-export default PrefixedLink;
+export default Link;
