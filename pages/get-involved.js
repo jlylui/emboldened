@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Layout from "../components/Layout";
 import VolunteerForm from "../components/VolunteerForm";
 import PartnerForm from "../components/PartnerForm";
+import Link from "../components/Link";
 
 const banner = {
   title: "Get Involved",
@@ -71,13 +72,12 @@ const GetInvolved = () => {
               <h4 className="card-title ">{volunteer.title}</h4>
               <p className="card-text">{volunteer.info}</p>
               <div className="text-right">
-                <a
-                  href={volunteer.link}
-                  data-toggle="collapse"
-                  onClick={handleVolunteerFormClick}>
-                  {volunteer.linkLabel}{" "}
-                  <i className="now-ui-icons arrows-1_minimal-down"></i>
-                </a>
+                <Link href={volunteer.link}>
+                  <a data-toggle="collapse" onClick={handleVolunteerFormClick}>
+                    {volunteer.linkLabel}{" "}
+                    <i className="now-ui-icons arrows-1_minimal-down"></i>
+                  </a>
+                </Link>
               </div>
               <div
                 className={`collapse ${formShow}`}
@@ -94,13 +94,12 @@ const GetInvolved = () => {
               <h4 className="card-title ">{partner.title}</h4>
               <p className="card-text">{partner.info}</p>
               <div className="text-right">
-                <a
-                  href={partner.link}
-                  data-toggle="collapse"
-                  onClick={handlePartnerFormClick}>
-                  {partner.linkLabel}{" "}
-                  <i className="now-ui-icons arrows-1_minimal-down"></i>
-                </a>
+                <Link href={partner.link}>
+                  <a data-toggle="collapse" onClick={handlePartnerFormClick}>
+                    {partner.linkLabel}{" "}
+                    <i className="now-ui-icons arrows-1_minimal-down"></i>
+                  </a>
+                </Link>
               </div>
               <div
                 className={`collapse ${partnerFormShow}`}

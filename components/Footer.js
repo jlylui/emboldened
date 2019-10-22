@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContactForm from "../components/ContactForm";
+import Link from "./Link";
 
 const date = new Date().getFullYear();
 
@@ -26,9 +27,11 @@ const Footer = props => {
 
   const followUs = props.socialMedia.map((link, index) => (
     <li className="list-inline-item" key={index}>
-      <a href={link.link} className="footer-icon">
-        <FontAwesomeIcon icon={link.icon} size="2x" />
-      </a>
+      <Link href={link.link}>
+        <a className="footer-icon">
+          <FontAwesomeIcon icon={link.icon} size="2x" />
+        </a>
+      </Link>
     </li>
   ));
 
