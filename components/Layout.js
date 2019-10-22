@@ -103,7 +103,6 @@ const socialMedia = [
 const assetPrefix = process.env.ASSET_PREFIX;
 
 const Layout = props => {
-  // console.log(props);
   return (
     <div>
       <Head>
@@ -131,7 +130,7 @@ const Layout = props => {
         <div className="container">
           <div className="content-center">
             <h1 className="h1-seo">{props.banner.title}</h1>
-            {props.banner.linkRef !== "" ? (
+            {props.banner.subTitle !== "" ? (
               <h3 className="h3-seo">
                 {props.banner.subTitle}
                 <Link href={`${props.banner.linkRef}`}>
