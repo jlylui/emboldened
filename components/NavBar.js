@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import Link from "next/link";
 import Link from "./Link";
+const assetPrefix = process.env.ASSET_PREFIX;
 
 const NavBar = props => {
   const [navbarColor, setNavbarColor] = useState("navbar-transparent");
@@ -76,7 +77,7 @@ const NavBar = props => {
             <Link href={props.navMenu[0].link}>
               <a className="navbar-brand">
                 <img
-                  src={`../${props.navMenu[0].logo}`}
+                  src={`${assetPrefix}${props.navMenu[0].logo}`}
                   alt=""
                   width="30"
                   height="30"

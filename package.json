@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/jlylui/emboldened/issues"
   },
-  "homepage": "https://github.com/jlylui/emboldened",
+  "homepage": "https://github.com/jlylui/emboldened/index.html",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "@fortawesome/free-brands-svg-icons": "^5.10.2",
