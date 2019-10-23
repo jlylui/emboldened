@@ -1,6 +1,7 @@
 # emboldened
 
-> A full-stack project for a static and server-rendered website with Node.js.
+> A full-stack project for a server-rendered website with Node.js.
+> Static View: https://jlylui.github.io/emboldened/
 
 ### Stack
 
