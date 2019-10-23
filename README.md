@@ -23,7 +23,7 @@ https://www.figma.com/file/USa407muyoA0Fz4X0hdSMq/Wireframe?node-id=0%3A1
 
 Pre-requisites:
 
-- Node.js(https://nodejs.org/en/download/)
+- [Node.js](https://nodejs.org/en/download/)
 
 `npm install`  
 `npm run dev`
@@ -32,8 +32,8 @@ Pre-requisites:
 
 Pre-requisites:
 
-- Docker for Desktop(https://www.docker.com/products/docker-desktop); or
-- Docker toolbox(https://docs.docker.com/toolbox/overview/)
+- [Docker for Desktop](https://www.docker.com/products/docker-desktop); or
+- [Docker toolbox](https://docs.docker.com/toolbox/overview/)
 
 Run the following `docker-compose` commands in the root of the project:
 
@@ -62,6 +62,16 @@ Knex, SQL query builder for Node.js, is used to connect server to Postgres db an
 
 ### Database Management: pgAdmin
 
-pgAdmin(https://www.pgadmin.org/download/) is an Open Source administration and management tool for the PostgreSQL database. It includes a graphical administration interface, an SQL query tool, a procedural code debugger and much more.
+[pgAdmin](https://www.pgadmin.org/download/) is an Open Source administration and management tool for the PostgreSQL database. It includes a graphical administration interface, an SQL query tool, a procedural code debugger and much more.
 
 Create server connection in pgAdmin on `localhost` port `5432`, username, password and database name are defined in [./docker-compose.yaml](./docker-compose.yaml) to manage the database.
+
+## Deploy to GitHub Pages: Static View
+Currently project can be deployed to GitHub Pages providing a static view of the website. 
+
+Run:
+`npm run deploy`
+
+This command export the static pages to `gh-pages` branch, see [./package.json](./package.json) for details. The file [next.config.js](./next.config.js) is configured to export path map and project name is added as a prefix to url path. A [wrapper for Next.js Link component](./components/Link.js) is created to use the prefix in href. For images the url is also prefixed with the project name, see [Layout header backgroundImage](./components/Layout.js). 
+
+
