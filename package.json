@@ -2,7 +2,7 @@
   "name": "emboldened",
   "version": "1.0.0",
   "description": "web development",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "dev": "nodemon -L server.js",
     "build": "next build",
@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/jlylui/emboldened/issues"
   },
-  "homepage": "https://github.com/jlylui/emboldened/index.html",
+  "homepage": "https://github.com/jlylui/emboldened/#readme",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "@fortawesome/free-brands-svg-icons": "^5.10.2",

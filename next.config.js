@@ -6,7 +6,11 @@ const assetPrefix = isProd ? "/emboldened" : "";
 
 module.exports = withCSS({
   exportPathMap: () => ({
-    "/": { page: "/" }
+    "/": { page: "/" },
+    "/about": { page: "/about" },
+    "/behind-scenes": { page: "/behind-scenes" },
+    "/get-involved": { page: "/get-involved" },
+    "/faith-statement": { page: "/faith-statement" }
   }),
   assetPrefix: assetPrefix,
   webpack: function(config) {
