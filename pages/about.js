@@ -18,11 +18,6 @@ const About = () => {
             to balance the calling of God in the modern world.
           </p>
           <p>
-            We learned that God made us, women, more than what the world boxes
-            us in to be. Out of our search, a desire to share this with our
-            Christian sisters brought forth this project.
-          </p>
-          <p>
             Emboldened gathers women passionate about bringing God into their
             daily lives &amp; work places. We want every woman to leave
             spiritually strengthened in their identity in God, equipped with
@@ -75,11 +70,11 @@ const About = () => {
                 <small className="text-muted">Photo caption</small>
               </p>
               <p className="card-text">
-                We are a bunch of women working in various industries with a
-                passion for women related ministries. Our friendship and open
-                honesty regarding the struggles we face as Christians, in
-                ministry, at work and as women forges our desire to acknowledge
-                and support others like us out there.{" "}
+                We are a diverse team working in various industries with a
+                passion for women related ministries. Our friendships and open
+                discussions regarding the struggles faced by Christians - in
+                ministry, at work and as women - fuels the desire to acknowledge
+                and support others like us out there!
               </p>
             </div>
           </div>

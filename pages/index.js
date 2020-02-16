@@ -2,12 +2,12 @@ import Layout from "../components/Layout";
 import RegisterForm from "../components/RegisterForm";
 
 const banner = {
-  title: "Emboldened by His Spirit",
-  subTitle: "Our conference launches in year 2021",
+  title: "Emboldened\nby His Spirit",
+  subTitle: "Our conference launches in year 2021, ",
   image: "/static/img/header-01.jpg",
   className: "home-page",
   linkRef: "/#register",
-  linkLabel: "Register your interest below"
+  linkLabel: "register your interest below"
 };
 
 const Index = () => {
