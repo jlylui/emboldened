@@ -8,6 +8,7 @@ const postRegistrationData = (req, res, db) => {
       country_code: req.body.country_code,
       phone: req.body.phone,
       conference: req.body.conference,
+      heard_from: req.body.heard_from,
       message: req.body.message,
       created_at
     })

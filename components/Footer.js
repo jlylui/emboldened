@@ -50,7 +50,9 @@ const Footer = props => {
       />
       <footer className="footer footer-default">
         <div className="container text-center">
-          <p className="text-muted">&copy;{date} Emboldened. Follow us</p>
+          <p className="text-muted">
+            Copyright {date} Emboldened Creations Ltd.
+          </p>
           <ul className="list-inline">{followUs}</ul>
           <div style={{ paddingTop: "20px" }}>
             <div className="row">

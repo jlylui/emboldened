@@ -321,6 +321,11 @@ ul {
   .media-frame {
     height: 511.875px;
   }
+  .popover-body p {
+    margin-bottom: 0px;
+    color: #5a5a5a;
+    white-space: pre-wrap;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */

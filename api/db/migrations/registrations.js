@@ -7,6 +7,7 @@ exports.up = function(knex, Promise) {
       country_code VARCHAR(5),
       phone VARCHAR(100),
       conference TEXT[] NOT NULL,
+      heard_from TEXT[] NOT NULL,
       message TEXT,
       created_at TIMESTAMP
     )`;

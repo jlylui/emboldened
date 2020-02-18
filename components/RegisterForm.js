@@ -10,6 +10,9 @@ const ContactFormSchema = Yup.object().shape({
   ...CommonFiledSchema,
   conference: Yup.array()
     .min(1, "*select at least one location")
+    .required("*required"),
+  heard_from: Yup.array()
+    .min(1, "*select at least one")
     .required("*required")
 });
 
@@ -21,6 +24,7 @@ const RegisterForm = () => {
     country_code: "",
     phone: "",
     conference: [],
+    heard_from: [],
     message: ""
   };
 
@@ -72,6 +76,19 @@ const RegisterForm = () => {
               value="Kuala Lumpur"
               className="form-check-inline"
             />
+          </div>
+          <div className="form-group">
+            <label>
+              How did you find out about Emboldened?
+              <span className="text-danger"> *</span>
+            </label>
+            {errors.heard_from && touched.heard_from ? (
+              <span className="error-text">{errors.heard_from}</span>
+            ) : null}
+            <br />
+            <Checkbox name="heard_from" value="family/friend" />
+            <Checkbox name="heard_from" value="web search" />
+            <Checkbox name="heard_from" value="church" />
           </div>
           <br />
           <div className="form-group">
