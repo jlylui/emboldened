@@ -56,7 +56,7 @@ const navMenu = [
     label: "home",
     link: "/",
     icon: "home",
-    logo: "/static/img/jl-icon-19144-light-square.png"
+    logo: "/static/img/Website-logo-black_on_white-circular-crop.png"
   },
   {
     label: "About Us",
@@ -110,7 +110,7 @@ const Layout = props => {
         <link
           rel="shortcut icon"
           type="image/x-icon"
-          href={`${assetPrefix}/static/img/jl-icon-19144-light-square.ico`}
+          href={`${assetPrefix}/static/img/website_logo___black_on_white_circular_crop_jNC_icon.ico`}
         />
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />

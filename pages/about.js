@@ -102,7 +102,7 @@ const About = () => {
                 name="Mei’en Lim"
                 title="Secretary (Perth)"
                 image="Meien.jpg"
-                description="Mei’En is a clinical psychologist and also has a PhD. She works in both the government department in WA and the private sector, and sees a wide range of clients across the lifespan. Mei’En loves being close to nature, connecting with others, and word puzzles. Being married to Barry who works FIFO, she fluctuates between obsessing over her Rhodesian Ridgeback and wifedom."
+                description="Mei’En is a clinical psychologist and also has a PhD. She works in both the government department in Western Australia and the private sector, and sees a wide range of clients across the lifespan. Mei’En loves being close to nature, connecting with others, and word puzzles. Being married to Barry who works FIFO, she fluctuates between obsessing over her Rhodesian Ridgeback and wifedom."
               />
               <ProfileCard
                 name="Marissa Teo"
